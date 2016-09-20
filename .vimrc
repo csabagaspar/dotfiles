@@ -90,6 +90,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "wikitopian/hardmode
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 
+let g:EditorConfig_max_line_indicator = "line"
+
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
