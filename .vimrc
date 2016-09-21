@@ -10,6 +10,7 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 filetype plugin indent on
