@@ -13,6 +13,6 @@ echo "Linking dotfile..."
 ln -fs .files/.vimrc
 
 echo "Git config..."
-#sh $HOME/.files/gitconfig.sh
+sh $HOME/.files/gitconfig.sh
 
 echo "Done."
