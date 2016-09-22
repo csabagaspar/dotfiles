@@ -11,6 +11,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
+Plug 'easymotion/vim-easymotion'
 call plug#end()
 
 filetype plugin indent on
