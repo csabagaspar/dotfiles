@@ -67,7 +67,8 @@ call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 set nobackup
 set nowb
 set noswapfile
-
+"easymotion
+map <Leader> <Plug>(easymotion-prefix)
 
 "pangloss/vim-javascript
 let g:javascript_plugin_flow = 1
