@@ -40,13 +40,15 @@ set showmatch               " Show matching brackets when text indicator is over
 set laststatus=2
 set noshowmode
 set encoding=utf-8
+set nobackup
+set nowb
+set noswapfile
 let mapleader = ","
 
 set background=dark
 colorscheme dracula
 "let g:airline_theme='dracula'
 set t_Co=256
-
 
 "for gvim
 set guioptions-=m  "remove menu bar
@@ -64,19 +66,9 @@ if has("gui_running")
 endif
 call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 
-"standard rule
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-set nobackup
-set nowb
-set noswapfile
+"standard
+let g:syntastic_javascript_checkers = ['standard']
+"
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
