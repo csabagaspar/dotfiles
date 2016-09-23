@@ -73,8 +73,8 @@ set noswapfile
 let g:javascript_plugin_flow = 1
 
 "ctrlpvim/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*     " Linux/MacOSX
-let g:ctrlp_working_path_mode = 'c'
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Linux/MacOSX
+let g:ctrlp_working_path_mode = 'ra'
 
 "dkprice/vim-easygrep
 let g:EasyGrepRecursive=1
