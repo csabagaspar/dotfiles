@@ -68,7 +68,8 @@ call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 
 "standard
 let g:syntastic_javascript_checkers = ['standard']
-"
+autocmd bufwritepost *.js silent !standard-format -w %
+
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
