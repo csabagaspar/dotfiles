@@ -12,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
+Plug 'scrooloose/syntastic'
 call plug#end()
 
 filetype plugin indent on
@@ -39,7 +40,7 @@ set showmatch               " Show matching brackets when text indicator is over
 set laststatus=2
 set noshowmode
 set encoding=utf-8
-
+let mapleader = ","
 
 set background=dark
 colorscheme dracula
@@ -63,6 +64,15 @@ if has("gui_running")
 endif
 call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 
+"standard rule
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 set nobackup
 set nowb
