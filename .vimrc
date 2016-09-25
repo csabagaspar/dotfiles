@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/syntastic'
 Plug 'majutsushi/tagbar'
+Plug 'ternjs/tern_for_vim'
 call plug#end()
 
 filetype plugin indent on
