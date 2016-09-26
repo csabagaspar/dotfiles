@@ -12,10 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
-Plug 'scrooloose/syntastic'
-Plug 'majutsushi/tagbar'
 Plug 'ternjs/tern_for_vim'
-Plug 'vim-scripts/taglist.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -69,10 +66,6 @@ if has("gui_running")
 endif
 call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
 
-"standard
-let g:syntastic_javascript_checkers = ['standard']
-autocmd bufwritepost *.js silent !standard-format -w %
-
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -83,17 +76,12 @@ let g:javascript_plugin_flow = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Linux/MacOSX
 let g:ctrlp_working_path_mode = 'ra'
 
-"tagbar
-nmap <F8> :TagbarToggle<CR>
-
 "dkprice/vim-easygrep
 let g:EasyGrepRecursive=1
 let g:EasyGrepFilesToExclude=".git,node_modules,*.json,coverage,build,dist"
 let g:EasyGrepCommand=1
 
 "scrooloose/nerdtree
-"let g:NERDTreeDirArrowExpandable="+"
-"let g:NERDTreeDirArrowCollapsible="~"
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
@@ -101,7 +89,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "wikitopian/hardmode
 "autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
+"
+"editorconfig
 let g:EditorConfig_max_line_indicator = "line"
 
 noremap <Up> <NOP>
