@@ -1,4 +1,4 @@
-call plug#begin()
+﻿call plug#begin() 
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -19,14 +19,14 @@ filetype plugin indent on
 syntax enable
 
 set nocompatible
-set autoread                " Set to auto read when a file is changed from the outside
+set autoread                " Set to auto read when a file is changed from
 set ruler                   " Always show current position
 set number                  " line numbers
 set ignorecase              " ignore case when searching
 set autoindent              " automatic indent new lines
 set list                    " show trailing whiteshace and tabsvi
-set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:�
-
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬
+"
 " No annoying sound on errors
 set noerrorbells
 set novisualbell
@@ -50,22 +50,6 @@ colorscheme dracula
 "let g:airline_theme='dracula'
 set t_Co=256
 
-"for gvim
-set guioptions-=m  "remove menu bar
-set guioptions-=T  "remove toolbar
-set guioptions-=r  "remove right-hand scroll bar
-set guioptions-=L  "remove left-hand scroll bar
-if has("gui_running")
-  if has("gui_gtk2")
-    set guifont=Inconsolata\ 12
-  elseif has("gui_macvim")
-    set guifont=Menlo\ Regular:h14
-  elseif has("gui_win32")
-    set guifont=Consolas:h14:cANSI
-  endif
-endif
-call system('wmctrl -i -b add,maximized_vert,maximized_horz -r '.v:windowid)
-
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -77,23 +61,24 @@ set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Lin
 let g:ctrlp_working_path_mode = 'ra'
 
 "dkprice/vim-easygrep
-let g:EasyGrepRecursive=1
-let g:EasyGrepFilesToExclude=".git,node_modules,*.json,coverage,build,dist"
-let g:EasyGrepCommand=1
-
-"scrooloose/nerdtree
+"let g:EasyGrepRecursive=1
+"let g:EasyGrepFilesToExclude=".git,node_modules,*.json,coverage,build,dist"
+"let g:EasyGrepCommand=1
+"
+""scrooloose/nerdtree
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "wikitopian/hardmode
-"autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+""autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
 "
-"editorconfig
+""editorconfig
 let g:EditorConfig_max_line_indicator = "line"
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
