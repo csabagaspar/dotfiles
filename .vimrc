@@ -9,6 +9,7 @@ Plug 'editorconfig/editorconfig-vim'
 "Plug 'wikitopian/hardmode'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'dracula/vim'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
@@ -46,8 +47,7 @@ set noswapfile
 let mapleader = ","
 
 set background=dark
-colorscheme dracula
-"let g:airline_theme='dracula'
+colorscheme dracula 
 set t_Co=256
 
 "easymotion
@@ -60,12 +60,7 @@ let g:javascript_plugin_flow = 1
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Linux/MacOSX
 let g:ctrlp_working_path_mode = 'ra'
 
-"dkprice/vim-easygrep
-"let g:EasyGrepRecursive=1
-"let g:EasyGrepFilesToExclude=".git,node_modules,*.json,coverage,build,dist"
-"let g:EasyGrepCommand=1
-"
-""scrooloose/nerdtree
+"scrooloose/nerdtree
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
 map <C-n> :NERDTreeToggle<CR>
@@ -73,8 +68,8 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "wikitopian/hardmode
 ""autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-"
-""editorconfig
+
+"editorconfig
 let g:EditorConfig_max_line_indicator = "line"
 
 noremap <Up> <NOP>

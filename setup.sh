@@ -11,6 +11,8 @@ cd $HOME
 
 echo "Linking dotfile..."
 ln -fs .files/.vimrc
+ln -fs .files/.tmux.conf
+ln -fs .files/.bashrc
 
 echo "Git config..."
 sh $HOME/.files/gitconfig.sh
