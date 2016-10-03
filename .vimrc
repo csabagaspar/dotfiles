@@ -45,6 +45,7 @@ set nobackup
 set nowb
 set noswapfile
 let mapleader = ","
+set ff=unix
 
 set background=dark
 colorscheme dracula 
