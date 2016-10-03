@@ -1,4 +1,4 @@
-﻿call plug#begin() 
+call plug#begin() 
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
