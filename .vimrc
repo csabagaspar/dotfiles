@@ -25,6 +25,7 @@ set ruler                   " Always show current position
 set number                  " line numbers
 set ignorecase              " ignore case when searching
 set autoindent              " automatic indent new lines
+set showcmd
 set list                    " show trailing whiteshace and tabsvi
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬
 "
