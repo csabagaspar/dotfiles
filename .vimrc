@@ -4,7 +4,6 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dkprice/vim-easygrep'
-"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'wikitopian/hardmode'
 Plug 'vim-airline/vim-airline'
@@ -13,7 +12,7 @@ Plug 'dracula/vim'
 Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
-Plug 'ternjs/tern_for_vim'
+Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'ervandew/supertab'
 call plug#end()
 
@@ -80,7 +79,8 @@ let g:EditorConfig_max_line_indicator = "line"
 let g:tern_map_keys=1
 "show argument hints
 let g:tern_show_argument_hints='on_hold'
-autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType javascript setlocal omnifunc=tern#Complete
+highlight Pmenu ctermbg=238 gui=bold
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
