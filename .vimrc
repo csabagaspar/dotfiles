@@ -4,7 +4,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'dkprice/vim-easygrep'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
 Plug 'editorconfig/editorconfig-vim'
 "Plug 'wikitopian/hardmode'
 Plug 'vim-airline/vim-airline'
@@ -14,6 +14,7 @@ Plug 'SirVer/ultisnips'
 Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'ternjs/tern_for_vim'
+Plug 'ervandew/supertab'
 call plug#end()
 
 filetype plugin indent on
@@ -46,6 +47,7 @@ set nobackup
 set nowb
 set noswapfile
 let mapleader = ","
+let g:mapleader = ","
 set ff=unix
 
 set background=dark
@@ -73,6 +75,14 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "editorconfig
 let g:EditorConfig_max_line_indicator = "line"
+
+"enable keyboard shortcuts
+let g:tern_map_keys=1
+"show argument hints
+let g:tern_show_argument_hints='on_hold'
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
+let g:SuperTabDefaultCompletionType = "context"
 
 noremap <Up> <NOP>
 noremap <Down> <NOP>
