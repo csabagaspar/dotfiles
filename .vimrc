@@ -14,6 +14,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'easymotion/vim-easymotion'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'ervandew/supertab'
+Plug 'dkprice/vim-easygrep'
 call plug#end()
 
 filetype plugin indent on
@@ -75,11 +76,22 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 "editorconfig
 let g:EditorConfig_max_line_indicator = "line"
 
-"enable keyboard shortcuts
+"onmi func
+
+augroup omnifuncs
+	autocmd!
+	autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+"	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup end
+
+"ternjs
 let g:tern_map_keys=1
-"show argument hints
 let g:tern_show_argument_hints='on_hold'
+let g:tern_show_signature_in_pum = 1
 autocmd FileType javascript setlocal omnifunc=tern#Complete
+
 highlight Pmenu ctermbg=238 gui=bold
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
