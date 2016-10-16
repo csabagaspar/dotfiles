@@ -16,6 +16,7 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
 Plug 'elzr/vim-json'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 filetype plugin indent on
