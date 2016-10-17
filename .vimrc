@@ -16,6 +16,7 @@ Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
 Plug 'elzr/vim-json'
+Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 call plug#end()
 
@@ -77,6 +78,9 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 "editorconfig
 let g:EditorConfig_max_line_indicator = "line"
+
+"jsx
+let g:jsx_ext_required = 0
 
 "onmi func
 
