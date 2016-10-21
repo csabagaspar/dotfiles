@@ -15,9 +15,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
 Plug 'ervandew/supertab'
 Plug 'dkprice/vim-easygrep'
-Plug 'elzr/vim-json'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
+Plug 'yuratomo/w3m.vim'
 call plug#end()
 
 filetype plugin indent on
@@ -123,7 +123,7 @@ execute "set <M-j>=\ej"
 execute "set <M-k>=\ek"
 nnoremap <M-j> :m .+1<CR>==
 nnoremap <M-k> :m .-2<CR>==
-inoremap <M-j> <Esc>:m .+1<CR>==gi
-inoremap <M-k> <Esc>:m .-2<CR>==gi
-vnoremap <M-j> :m '>+1<CR>gv=gv
-vnoremap <M-k> :m '<-2<CR>gv=gv
+"inoremap <M-j> <Esc>:m .+1<CR>==gi
+"inoremap <M-k> <Esc>:m .-2<CR>==gi
+"vnoremap <M-j> :m '>+1<CR>gv=gv
+"vnoremap <M-k> :m '<-2<CR>gv=gv
