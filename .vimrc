@@ -56,7 +56,7 @@ set ff=unix
 set background=dark
 colorscheme dracula 
 set t_Co=256
-
+set timeout timeoutlen=3000 ttimeoutlen=100
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
