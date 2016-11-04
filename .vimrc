@@ -18,6 +18,7 @@ Plug 'dkprice/vim-easygrep'
 Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'yuratomo/w3m.vim'
+Plug 'vim-scripts/javacomplete'
 call plug#end()
 
 filetype plugin indent on
@@ -90,6 +91,8 @@ augroup omnifuncs
 	autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 "	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
+	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 augroup end
 
 "ternjs
