@@ -19,6 +19,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'yuratomo/w3m.vim'
 Plug 'vim-scripts/javacomplete'
+Plug 'autowitch/hive.vim'
 Plug 'Raimondi/delimitMate'
 call plug#end()
 
@@ -108,6 +109,12 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 let delimitMate_expand_cr = 1
+
+" for .hql files
+au BufNewFile,BufRead *.hql set filetype=hive expandtab
+"
+" " for .q files
+au BufNewFile,BufRead *.q set filetype=hive expandtab
 no <Up> <NOP> 
 no <Down> <NOP> 
 no <Left> <NOP>
