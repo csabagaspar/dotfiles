@@ -19,6 +19,7 @@ Plug 'mxw/vim-jsx'
 Plug 'mattn/emmet-vim'
 Plug 'yuratomo/w3m.vim'
 Plug 'vim-scripts/javacomplete'
+Plug 'Raimondi/delimitMate'
 call plug#end()
 
 filetype plugin indent on
