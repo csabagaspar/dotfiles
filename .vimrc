@@ -1,28 +1,4 @@
-call plug#begin() 
-Plug 'pangloss/vim-javascript'
-Plug 'scrooloose/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'dkprice/vim-easygrep'
-Plug 'editorconfig/editorconfig-vim'
-"Plug 'wikitopian/hardmode'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'dracula/vim'
-Plug 'SirVer/ultisnips'
-Plug 'tpope/vim-fugitive'
-Plug 'easymotion/vim-easymotion'
-Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
-Plug 'ervandew/supertab'
-Plug 'dkprice/vim-easygrep'
-Plug 'mxw/vim-jsx'
-Plug 'mattn/emmet-vim'
-Plug 'yuratomo/w3m.vim'
-Plug 'vim-scripts/javacomplete'
-Plug 'autowitch/hive.vim'
-Plug 'Raimondi/delimitMate'
-call plug#end()
-
+execute pathogen#infect()
 filetype plugin indent on
 syntax enable
 
