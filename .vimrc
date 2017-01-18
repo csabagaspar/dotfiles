@@ -107,7 +107,7 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabDefaultCompletionType = "context"
 
 
-
+let delimitMate_expand_cr = 1
 no <Up> <NOP> 
 no <Down> <NOP> 
 no <Left> <NOP>
