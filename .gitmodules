@@ -4,3 +4,24 @@
 [submodule ".vim/bundle/vim.git"]
 	path = .vim/bundle/vim.git
 	url = https://github.com/dracula/vim.git
+[submodule ".vim/bundle/editorconfig-vim.git"]
+	path = .vim/bundle/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule ".vim/bundle/ctrlp.vim.git"]
+	path = .vim/bundle/ctrlp.vim.git
+	url = https://github.com/ctrlpvim/ctrlp.vim.git
+[submodule ".vim/bundle/vim-airline.git"]
+	path = .vim/bundle/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule ".vim/bundle/vim-airline-themes.git"]
+	path = .vim/bundle/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule ".vim/bundle/hive.vim.git"]
+	path = .vim/bundle/hive.vim.git
+	url = https://github.com/autowitch/hive.vim.git
+[submodule ".vim/bundle/tern_for_vim.git"]
+	path = .vim/bundle/tern_for_vim.git
+	url = https://github.com/ternjs/tern_for_vim.git
+[submodule ".vim/bundle/supertab.git"]
+	path = .vim/bundle/supertab.git
+	url = https://github.com/ervandew/supertab.git
