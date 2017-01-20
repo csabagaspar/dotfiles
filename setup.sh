@@ -9,7 +9,9 @@ echo ".files..."
 
 cd $HOME
 
+
 echo "Linking dotfile..."
+ln -s dotfiles/.vim ~/.vim
 ln -fs dotfiles/.vimrc
 ln -fs dotfiles/.tmux.conf
 ln -fs dotfiles/.bashrc
