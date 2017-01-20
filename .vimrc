@@ -49,6 +49,9 @@ let g:ctrlp_working_path_mode = 'ra'
 "scrooloose/nerdtree
 let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
