@@ -1,3 +1,7 @@
+git config --global user.name "csabagaspar"
+git config --global user.email "gaspar.csaba@gmail.com"
+
+
 git config --global alias.a "add"
 git config --global alias.b "branch"
 git config --global alias.co "checkout"
