@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
 echo ".files..."
-if [[ ! -d $HOME/.files ]]; then
-  git clone https://github.com/csabagaspar/dotfiles.git $HOME/.files
-else
-  cd $HOME/dotfiles && git pull --rebase
-fi
+#if [[ ! -d $HOME/.files ]]; then
+#  git clone https://github.com/csabagaspar/dotfiles.git $HOME/.files
+#else
+#  cd $HOME/dotfiles && git pull --rebase
+#fi
 
 cd $HOME
 
