@@ -30,12 +30,13 @@ set nowb
 set noswapfile
 let mapleader = ","
 let g:mapleader = ","
-set ff=unix
+set fileformat=unix
 
 set background=dark
 colorscheme dracula 
 set t_Co=256
-set timeout timeoutlen=3000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeoutlen=0
+
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
@@ -88,6 +89,11 @@ let g:SuperTabDefaultCompletionType = "context"
 
 
 let delimitMate_expand_cr = 1
+
+" vertical line indentation
+let g:indentLine_color_term = 239
+let g:indentLine_color_gui = '#09AA08'
+let g:indentLine_char = '¦'
 
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
