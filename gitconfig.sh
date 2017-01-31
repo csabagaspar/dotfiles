@@ -1,5 +1,6 @@
 git config --global user.name "csabagaspar"
 git config --global user.email "gaspar.csaba@gmail.com"
+git config --global credential.helper "wincred"
 
 
 git config --global alias.a "add"
