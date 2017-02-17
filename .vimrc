@@ -36,7 +36,7 @@ set background=dark
 colorscheme dracula 
 set t_Co=256
 set timeout timeoutlen=1000 ttimeoutlen=0
-
+let g:indentLine_setConceal = 0
 "easymotion
 map <Leader> <Plug>(easymotion-prefix)
 
