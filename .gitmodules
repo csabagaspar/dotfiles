@@ -1,33 +1,33 @@
-[submodule ".vim/bundle/nerdtree.git"]
-	path = .vim/bundle/nerdtree.git
+[submodule "vim/bundle/nerdtree.git"]
+	path = vim/bundle/nerdtree.git
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/bundle/vim.git"]
-	path = .vim/bundle/vim.git
+[submodule "vim/bundle/vim.git"]
+	path = vim/bundle/vim.git
 	url = https://github.com/dracula/vim.git
-[submodule ".vim/bundle/editorconfig-vim.git"]
-	path = .vim/bundle/editorconfig-vim.git
+[submodule "vim/bundle/editorconfig-vim.git"]
+	path = vim/bundle/editorconfig-vim.git
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule ".vim/bundle/ctrlp.vim.git"]
-	path = .vim/bundle/ctrlp.vim.git
+[submodule "vim/bundle/ctrlp.vim.git"]
+	path = vim/bundle/ctrlp.vim.git
 	url = https://github.com/ctrlpvim/ctrlp.vim.git
-[submodule ".vim/bundle/vim-airline.git"]
-	path = .vim/bundle/vim-airline.git
+[submodule "vim/bundle/vim-airline.git"]
+	path = vim/bundle/vim-airline.git
 	url = https://github.com/vim-airline/vim-airline.git
-[submodule ".vim/bundle/vim-airline-themes.git"]
-	path = .vim/bundle/vim-airline-themes.git
+[submodule "vim/bundle/vim-airline-themes.git"]
+	path = vim/bundle/vim-airline-themes.git
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule ".vim/bundle/hive.vim.git"]
-	path = .vim/bundle/hive.vim.git
+[submodule "vim/bundle/hive.vim.git"]
+	path = vim/bundle/hive.vim.git
 	url = https://github.com/autowitch/hive.vim.git
-[submodule ".vim/bundle/tern_for_vim.git"]
-	path = .vim/bundle/tern_for_vim.git
+[submodule "vim/bundle/tern_for_vim.git"]
+	path = vim/bundle/tern_for_vim.git
 	url = https://github.com/ternjs/tern_for_vim.git
-[submodule ".vim/bundle/supertab.git"]
-	path = .vim/bundle/supertab.git
+[submodule "vim/bundle/supertab.git"]
+	path = vim/bundle/supertab.git
 	url = https://github.com/ervandew/supertab.git
-[submodule ".vim/bundle/indentLine.git"]
-	path = .vim/bundle/indentLine.git
+[submodule "vim/bundle/indentLine.git"]
+	path = vim/bundle/indentLine.git
 	url = https://github.com/Yggdroot/indentLine.git
-[submodule ".vim/bundle/vim-javascript.git"]
-	path = .vim/bundle/vim-javascript.git
+[submodule "vim/bundle/vim-javascript.git"]
+	path = vim/bundle/vim-javascript.git
 	url = https://github.com/pangloss/vim-javascript.git

@@ -1,1 +1,1 @@
-git clone --recurse-submodules https://github.com/csabagaspar/dotfiles.git ~/dotfiles
+git clone --recurse-submodules https://github.com/csabagaspar/dotfiles.git
