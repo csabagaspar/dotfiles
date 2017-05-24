@@ -6,3 +6,7 @@ source ~/dotfiles/git/git-completion.bash
 source ~/dotfiles/git/git-prompt.sh
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=true
+
+if [ -f ~/dotfiles/bash/alias.bash ] ; then
+  source  ~/dotfiles/bash/alias.bash
+fi
