@@ -16,6 +16,7 @@ ln -fs dotfiles/vim/vimrc  ~/.vimrc
 ln -fs dotfiles/tmux/tmux.conf ~/.tmux.conf
 ln -fs dotfiles/bash/bashrc ~/.bashrc
 ln -fs dotfiles/tern/.tern-project ~/.tern-project
+ln -fs dotfiles/curl/.curlrc ~/.curlrc
 
 echo "Git config..."
 sh ~/dotfiles/git/gitconfig.sh
