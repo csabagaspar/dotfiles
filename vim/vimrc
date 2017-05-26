@@ -1,4 +1,5 @@
 execute pathogen#infect()
+
 filetype plugin indent on    "file type detection
 syntax enable                "basic syntax highlight
 
@@ -12,6 +13,8 @@ set hlsearch                " Highlight search results
 set smartcase               " When searching try to be smart about cases
 set incsearch
 set showmatch               " Show matching brackets when text indicator is over them
+
+set wildmode=list:longest,full
 
 set autoindent              " automatic indent new lines
 set showcmd
@@ -28,12 +31,13 @@ set shortmess=a
 set laststatus=2
 set noshowmode
 set encoding=utf-8
+set fileformat=unix
+
 set nobackup
 set nowb
 set noswapfile
 let mapleader = ","
 let g:mapleader = ","
-set fileformat=unix
 
 set foldmethod=indent
 set nofoldenable
