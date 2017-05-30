@@ -2,6 +2,9 @@ VISUAL=vim
 EDITOR="$VISUAL"
 TERM=xterm-256color
 
+HISTCONTROL=ignoreboth
+HISTIGNORE='cd:ls:bg:fg:history:vim'
+
 source ~/dotfiles/git/git-completion.bash
 source ~/dotfiles/git/git-prompt.sh
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
