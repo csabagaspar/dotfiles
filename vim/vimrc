@@ -50,15 +50,6 @@ set nobackup
 set nowb
 set noswapfile
 
-" -------------------------------------
-"  Keyboard shortcuts
-" -------------------------------------
-"
-let mapleader = ","
-let g:mapleader = ","
-
-inoremap jj <Esc>
-
 
 " -------------------------------------
 "  Appearance settings
@@ -76,48 +67,14 @@ set t_Co=256
 set timeout timeoutlen=1000 ttimeoutlen=0
 let g:indentLine_setConceal = 0
 
-map <Leader> <Plug>(easymotion-prefix)
 
-"pangloss/vim-javascript
-let g:javascript_plugin_flow = 1
-let g:javascript_conceal_function             = "ƒ"
-let g:javascript_conceal_null                 = "ø"
-let g:javascript_conceal_this                 = "@"
-let g:javascript_conceal_return               = "<"
-let g:javascript_conceal_undefined            = "¿"
-let g:javascript_conceal_NaN                  = "ℕ"
-let g:javascript_conceal_prototype            = "¶"
-let g:javascript_conceal_static               = "•"
-let g:javascript_conceal_super                = "Ω"
-let g:javascript_conceal_arrow_function       = "⇒"
-let g:javascript_conceal_noarg_arrow_function = "🞅"
-let g:javascript_conceal_underscore_arrow_function = "🞅"
 set conceallevel=1
 
-map <Leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
-"ctrlpvim/ctrlp.vim
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Linux/MacOSX
-let g:ctrlp_working_path_mode = 'ra'
-let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|svn|target)$','file': '\v\.(exe|so|dll)$'}
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*,*/target/*     " Linux/MacOSX
+source ~/dotfiles/vim/startup/keys.vim
+source ~/dotfiles/vim/startup/plugins.vim
 
-"scrooloose/nerdtree
-let NERDTreeDirArrows = 1
-let NERDTreeShowHidden=1
-let g:NERDTreeDirArrowExpandable="+"
-let g:NERDTreeDirArrowCollapsible="~"
-
-map <C-n> :NERDTreeToggle<CR>
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-
-"wikitopian/hardmode
-""autocmd VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
-
-"editorconfig
-let g:EditorConfig_max_line_indicator = "line"
-
-"jsx
-let g:jsx_ext_required = 0
 
 set dictionary+=./.dictionary
 
@@ -132,50 +89,10 @@ augroup omnifuncs
 	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 augroup end
 
-"ternjs
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-let g:tern_show_signature_in_pum = 1
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-
-highlight Pmenu ctermbg=238 gui=bold
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabContextDefaultCompletionType = "context"
-
-runtime macros/matchit.vim
-let delimitMate_expand_cr = 1
-
-" vertical line indentation
-let g:indentLine_color_term = 239
-let g:indentLine_color_gui = '#09AA08'
-let g:indentLine_char = '¦'
 
 " for .hql files
 au BufNewFile,BufRead *.hql set filetype=hive expandtab
 "
 " " for .q files
 au BufNewFile,BufRead *.q set filetype=hive expandtab
-no <Up> <NOP> 
-no <Down> <NOP> 
-no <Left> <NOP>
-no <Right> <NOP>
 
-ino <Up> <NOP>
-ino <Down> <NOP>
-ino <Left> <NOP>
-ino <Right> <NOP>
-
-vno <Up> <NOP>
-vno <Down> <NOP>
-vno <Left> <NOP>
-vno <Right> <NOP>
-
-execute "set <M-j>=\ej"
-execute "set <M-k>=\ek"
-nnoremap <M-j> :m .+1<CR>==
-nnoremap <M-k> :m .-2<CR>==
-
-"inoremap <M-j> <Esc>:m .+1<CR>==gi
-"inoremap <M-k> <Esc>:m .-2<CR>==gi
-"vnoremap <M-j> :m '>+1<CR>gv=gv
-"vnoremap <M-k> :m '<-2<CR>gv=gv
