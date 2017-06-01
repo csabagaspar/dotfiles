@@ -1,9 +1,13 @@
+" -------------------------------------
+"  General settings
+" -------------------------------------
 execute pathogen#infect()
 
-filetype plugin indent on    "file type detection
-syntax enable                "basic syntax highlight
+filetype indent on    "file type detection
+filetype plugin on    "file type detection
 
 set nocompatible
+
 set autoread                " Set to auto read when a file is changed from
 set ruler                   " Always show current position
 set number                  " line numbers
@@ -16,7 +20,6 @@ set showmatch               " Show matching brackets when text indicator is over
 
 set wildmode=list:longest,full
 
-set autoindent              " automatic indent new lines
 set showcmd
 set list                    " show trailing whiteshace and tabsvi
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬
@@ -33,13 +36,35 @@ set noshowmode
 set encoding=utf-8
 set fileencoding=utf-8
 set fileformat=unix
+" -------------------------------------
+"  Text settings
+" ------------------------------------- 
+
+set autoindent              " automatic indent new lines
+
+" -------------------------------------
+"  File & backup settings
+" -------------------------------------
 
 set nobackup
 set nowb
 set noswapfile
 
+" -------------------------------------
+"  Keyboard shortcuts
+" -------------------------------------
+"
 let mapleader = ","
 let g:mapleader = ","
+
+inoremap jj <Esc>
+
+
+" -------------------------------------
+"  Appearance settings
+" -------------------------------------
+
+syntax enable                "basic syntax highlight
 
 set foldmethod=indent
 set nofoldenable
@@ -50,7 +75,7 @@ colorscheme dracula
 set t_Co=256
 set timeout timeoutlen=1000 ttimeoutlen=0
 let g:indentLine_setConceal = 0
-"easymotion
+
 map <Leader> <Plug>(easymotion-prefix)
 
 "pangloss/vim-javascript
@@ -74,6 +99,7 @@ map <Leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<
 "ctrlpvim/ctrlp.vim
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*     " Linux/MacOSX
 let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|svn|target)$','file': '\v\.(exe|so|dll)$'}
 
 "scrooloose/nerdtree
 let NERDTreeDirArrows = 1
@@ -149,7 +175,6 @@ execute "set <M-k>=\ek"
 nnoremap <M-j> :m .+1<CR>==
 nnoremap <M-k> :m .-2<CR>==
 
-inoremap jj <Esc>
 "inoremap <M-j> <Esc>:m .+1<CR>==gi
 "inoremap <M-k> <Esc>:m .-2<CR>==gi
 "vnoremap <M-j> :m '>+1<CR>gv=gv
