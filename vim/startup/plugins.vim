@@ -54,3 +54,6 @@ let g:indentLine_char = '¦'
 
 "easy motion
 map <Leader> <Plug>(easymotion-prefix)
+"vim-notes
+let g:notes_directories = ['~/dotfiles/notes']
+let g:notes_suffix = '.txt'

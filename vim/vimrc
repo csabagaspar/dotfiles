@@ -41,6 +41,8 @@ set fileformat=unix
 " ------------------------------------- 
 
 set autoindent              " automatic indent new lines
+set binary
+set noeol  "disable auto end of line
 
 " -------------------------------------
 "  File & backup settings

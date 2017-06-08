@@ -46,3 +46,9 @@
 [submodule "vim/bundle/csv.vim.git"]
 	path = vim/bundle/csv.vim.git
 	url = https://github.com/vim-scripts/csv.vim.git
+[submodule "vim/bundle/vim-notes.git"]
+	path = vim/bundle/vim-notes.git
+	url = https://github.com/xolox/vim-notes.git
+[submodule "vim/bundle/vim-misc.git"]
+	path = vim/bundle/vim-misc.git
+	url = https://github.com/xolox/vim-misc.git
