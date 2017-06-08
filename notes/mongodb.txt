@@ -1,0 +1,95 @@
+mongodb
+
+
+RDBMS               MongoDB
+Table                    Collection
+					No matching autocommands* schema less
+					* no need conversion
+
+Tuple/Row               Document
+					* Ease of scale-out
+
+column                    Field
+Table Join               Embedded Documents
+            					* no complex join
+Primary Key               Primary Key (Default key _id provided by mongodb itself)
+===================================================================================
+
+# Mongo shell
+
+   mongo
+
+# Show
+   • show dbs
+   • use DATABASE_NAME
+   • db.dropDatabase()
+
+# User
+   * db.getUsers()
+ ## Create your superuser
+   $ mongo
+    use admin
+   db.createUser({user:"tutorials",pwd:"tutorials", roles:[{role:"root",db:"admin"}]})
+   exit
+
+ ## Alias for convenience (optional and at your own risk)
+   $ echo 'alias mongo="mongo --port 27017 -u someadmin -p secret --authenticationDatabase admin"' >> ~/.bash_profile
+   $ source ~/.bash_profile
+
+ ## Add user to your DB
+   $ mongo
+   use some_db
+   db.createUser(
+         {
+user: "tutorials",
+pwd: "tutorials",
+roles: ["readWrite"]
+}
+)
+
+   ## If you get locked out, start over
+      sudo service mongod stop
+   sudo mv /data/admin.* .  # for backup
+   sudo service mongod start
+=======================================================================================:w
+
+#(C)reate
+   db.createCollection(name, options)
+   db.COLLECTION_NAME.save({})
+
+#(R)ead
+   show collections
+   db.COLLECTION_NAME.find({})  ->  specify a property {name: 'user1'}
+   db.COLLECTION_NAME.find().pretty()
+
+#(U)pdate
+   db.COLLECTION_NAME.insert({})
+   db.COLLECTION_NAME.update( {name: 'oldaname' } {name:'newname'})
+
+#(D)elete
+   db.COLLECTION_NAME.drop()
+   db.COLLECTION_NAME.remove({})  -> specify a property {name: 'user1'}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
