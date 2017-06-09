@@ -2,6 +2,7 @@
 
 echo "Installing dotfiles."
 
+echo "=============================="
 echo "Initializing submodule(s)"
 git submodule update --init --recursive
 
@@ -36,6 +37,7 @@ for file in "${VIMFILES[@]}"; do
 done
 
 
+echo "=============================="
 echo "Running git setup..."
 sh ~/dotfiles/git/gitconfig.sh
 
