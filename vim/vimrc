@@ -10,7 +10,8 @@ set nocompatible
 
 set autoread                " Set to auto read when a file is changed from
 set ruler                   " Always show current position
-set number                  " line numbers
+set number
+set relativenumber
 
 set ignorecase              " ignore case when searching
 set hlsearch                " Highlight search results

@@ -8,11 +8,10 @@ Table                    Collection
 
 Tuple/Row               Document
 					* Ease of scale-out
-
 column                    Field
 Table Join               Embedded Documents
             					* no complex join
-Primary Key               Primary Key (Default key _id provided by mongodb itself)
+Primary Key               Primary Key (Default key id provided by mongodb itself)
 ===================================================================================
 
 # Mongo shell
@@ -69,7 +68,6 @@ roles: ["readWrite"]
 #(D)elete
    db.COLLECTION_NAME.drop()
    db.COLLECTION_NAME.remove({})  -> specify a property {name: 'user1'}
-
 
 
 

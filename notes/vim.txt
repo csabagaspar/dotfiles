@@ -3,11 +3,11 @@ vim
 ==========================================
 BASICS
 ==========================================
-:e filename	Open filename for edition <TAB>
-:w	Save file
-:wa
-:q	Exit Vim
-:q!	Quit without saving
+   •:e
+   •:w
+   •:wa
+   •:q
+:q!
 :x	Write file (if changes has been made) and exit
 :sav filename	Saves file as filename
 .	Repeats the last change made in normal mode
@@ -58,6 +58,33 @@ llll
 
 
 ==========================================
+TEXT OBJECTS
+==========================================
+   • w world
+   • s senteces
+   • p paragraphs
+   • t tags
+
+==========================================
+MOTIONS
+==========================================
+   • a all
+   • i in
+   • t till
+   • f find
+   • F find back
+==========================================
+COMMANDS
+==========================================
+   • d delete (cut)
+   • c change
+   • y yank
+   • v visual select
+
+
+COMMAND + TEXT OBJECT OR MOTION
+
+==========================================
 FOLD
 ==========================================
 zo
@@ -70,8 +97,8 @@ zn - unfold everyting
 INSERT
 ==========================================
 
-i, a, s,
-I, A
+i, a, s, c
+I, A -begin and end of line
 
 ==========================================
 DELETE
@@ -82,7 +109,8 @@ dw
 dd
 
 
-C
+   C -end of line delete and insert mode
+   D - end of line
 
 ==========================================
 CUT, COPY & PASTE
@@ -303,3 +331,14 @@ SYNTAX HIGHLIGHTING
 :h runtimepath
 :source
 :so $MYVIMRC
+
+==========================================
+MACRO
+==========================================
+•record
+   •q{register}
+   •do something
+   •q
+
+• play
+   • @{register}
