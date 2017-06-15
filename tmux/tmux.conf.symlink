@@ -1,9 +1,10 @@
-## make tmux display things in 256 colors
-set -g default-terminal "screen-256color"
-#### COLOUR (Solarized 256)
 
 set -s escape-time 0
 
+#THEME
+## make tmux display things in 256 colors
+set -g default-terminal "screen-256color"
+#### COLOUR (Solarized 256)
 # default statusbar colors
 set-option -g status-bg colour235 #base02
 set-option -g status-fg colour136 #yellow
@@ -37,17 +38,41 @@ set-window-option -g clock-mode-colour colour64 #green
 # bell
 set-window-option -g window-status-bell-style fg=colour235,bg=colour160 #base02, red
 
+#KEY BINDING
+# reload config file
+bind r source-file ~/.tmux.conf \; display "Config Reloaded!"
+
+# quickly open a new window
+bind N new-window
 
 # pane movement shortcuts
 bind h select-pane -L
 bind j select-pane -D
 bind k select-pane -U
 bind l select-pane -R
+# set vi mode for copy mode
+setw -g mode-keys vi
 
-new-session -s dev -n ide
-split-window -v -p 10 -t dev
-select-pane -t 1
-split-window -h -p 30 -t dev
-new-window -n shell
-select-window -t dev:1
-select-pane -t 1
+# more settings to make copy-mode more vim-like
+unbind [
+bind Escape copy-mode
+unbind p
+bind p paste-buffer
+bind -t vi-copy 'v' begin-selection
+bind -t vi-copy 'y' copy-selection
+
+# Start windows and panes at 1, not 0
+set -g base-index 1
+set -g pane-base-index 1
+
+# Bind function keys.
+bind -n F1 select-window -t 1
+bind -n F2 select-window -t 2
+bind -n F3 select-window -t 3
+bind -n F4 select-window -t 4
+bind -n F5 select-window -t 5
+bind -n F6 select-window -t 6
+bind -n F7 select-window -t 7
+bind -n F8 select-window -t 8
+bind -n F9 select-window -t 9
+bind -n F10 select-window -t 0
