@@ -10,6 +10,6 @@ source ~/dotfiles/git/git-prompt.sh
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=true
 
-if [ -f ~/dotfiles/bash/alias.bash ] ; then
-  source  ~/dotfiles/bash/alias.bash
+if [ -f ~/.bash_aliases] ; then
+  source  ~/.bash_aliases
 fi
