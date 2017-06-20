@@ -3,11 +3,28 @@
 echo "Installing dotfiles."
 
 echo "=============================="
-echo "Initializing submodule(s)"
+echo -e "\n\nRunning platform specific installs.."
+echo "=============================="
+if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
+    echo -e "\n\nRunning on Cygwin"
+
+    source install/cygwin.sh
+
+fi
+
+echo "=============================="
+echo "Running git setup..."
+echo "=============================="
+sh ~/dotfiles/git/gitconfig.sh
+
+echo "=============================="
+echo "Initializing git submodule(s)"
+echo "=============================="
 git submodule update --init --recursive
 
 DOTFILES=$HOME/dotfiles
 
+echo "=============================="
 echo -e "\nCreating symlinks"
 echo "=============================="
 linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
@@ -20,6 +37,8 @@ for file in $linkables ; do
         ln -s $file $target
     fi
 done
+
+echo "=============================="
 echo -e "\n\nCreating vim symlinks"
 echo "=============================="
 VIMFILES=( "$HOME/.vim:$DOTFILES/vim"
@@ -36,9 +55,5 @@ for file in "${VIMFILES[@]}"; do
     fi
 done
 
-
-echo "=============================="
-echo "Running git setup..."
-sh ~/dotfiles/git/gitconfig.sh
 
 echo "Done."
