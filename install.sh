@@ -9,11 +9,11 @@ if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
     echo -e "\n\nRunning on Cygwin"
 
     source install/choco.sh
-#    source install/cygwin.sh
+    source install/cygwin.sh
 
 fi
 if [ "$(uname)" == "Linux" ]; then
-    echo -e "\n\nRunning on linux"
+    echo -e "\n\nRunning on Linux"
 fi
 
 echo "=============================="
@@ -58,6 +58,5 @@ for file in "${VIMFILES[@]}"; do
         ln -s ${VALUE} ${KEY}
     fi
 done
-
 
 echo "Done."
