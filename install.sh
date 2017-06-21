@@ -8,8 +8,12 @@ echo "=============================="
 if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
     echo -e "\n\nRunning on Cygwin"
 
-    source install/cygwin.sh
+    source install/choco.sh
+#    source install/cygwin.sh
 
+fi
+if [ "$(uname)" == "Linux" ]; then
+    echo -e "\n\nRunning on linux"
 fi
 
 echo "=============================="
