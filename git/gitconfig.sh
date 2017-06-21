@@ -16,4 +16,4 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
 git config --global alias.wsdiff "diff --ignore-space-at-eol -w -b --no-ext-diff"
 git config --global core.editor "vim"
-git config --global core.autocrlf "input"
+git config --global core.autocrlf "false"
