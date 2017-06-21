@@ -1,5 +1,5 @@
 alias gitignore='cp ~/dotfiles/git/.gitignore .'
 alias gitattributes='cp ~/dotfiles/git/.gitattributes .'
-alias editorconfig='cp ~/dotfiles/editorconfig/.editorconfig .'
-alias tern-project='cp ~/dotfiles/tern/tern-project.symlink ./.tern-project'
-alias t='~/dotfiles/tmux/t.sh'
+alias editorconfig='cp ~/dotfiles/.editorconfig .'
+alias tern-project='cp ~/dotfiles/configs/tern-project.symlink ./.tern-project'
+alias t='~/dotfiles/bash/t.sh'
