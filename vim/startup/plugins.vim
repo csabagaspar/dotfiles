@@ -57,3 +57,5 @@ map <Leader> <Plug>(easymotion-prefix)
 "vim-notes
 let g:notes_directories = ['~/dotfiles/notes']
 let g:notes_suffix = '.txt'
+"jsx
+let g:jsx_ext_required = 0
