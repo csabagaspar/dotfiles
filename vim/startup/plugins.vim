@@ -59,3 +59,5 @@ let g:notes_directories = ['~/dotfiles/notes']
 let g:notes_suffix = '.txt'
 "jsx
 let g:jsx_ext_required = 0
+"java code completion
+autocmd FileType java setlocal omnifunc=javacomplete#Complete

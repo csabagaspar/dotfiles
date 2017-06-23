@@ -284,12 +284,12 @@ cprev
 ==========================================
 AUTO-COMPLETION
 ==========================================
+
 Ctrl+n Ctrl+p (in insert mode)	Complete word
 
 Ctrl+x Ctrl+l	Complete line
 Ctrl+x Ctrl+f	filename
 Ctrl+x Ctrl+d	predefined
-Ctrl+x Ctrl+n  name in file
 
 :set dictionary=dict	Define dict as a dictionnary
 Ctrl+x Ctrl+k	Complete with dictionnary

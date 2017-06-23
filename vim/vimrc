@@ -88,8 +88,6 @@ augroup omnifuncs
 	autocmd FileType html setlocal omnifunc=htmlcomplete#CompleteTags
 "	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
-	autocmd Filetype java setlocal omnifunc=javacomplete#Complete
-	autocmd Filetype java setlocal completefunc=javacomplete#CompleteParamsInfo
 augroup end
 
 

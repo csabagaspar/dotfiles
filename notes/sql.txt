@@ -1,0 +1,4 @@
+sql
+
+   • SELECT    *      FROM <table> ORDER BY <column>
+   •       count(*)
