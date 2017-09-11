@@ -13,6 +13,7 @@ else
   gradle
   maven
   nvm
+  nodejs
   'python --version 2.7.6'
   )
 

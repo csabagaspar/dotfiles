@@ -17,6 +17,12 @@ if [ "$(uname)" == "Linux" ]; then
 fi
 
 echo "=============================="
+echo -e "\n\nSet env"
+echo "=============================="
+MAVEN_OPTS=-Xms256m
+M2_REPO=${HOME}/.m2
+
+echo "=============================="
 echo "Running git setup..."
 echo "=============================="
 sh ~/dotfiles/git/gitconfig.sh

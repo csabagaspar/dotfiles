@@ -61,3 +61,4 @@ let g:notes_suffix = '.txt'
 let g:jsx_ext_required = 0
 "java code completion
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+let g:JavaComplete_ShowExternalCommandsOutput = 1
