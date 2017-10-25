@@ -50,7 +50,7 @@ roles: ["readWrite"]
       sudo service mongod stop
    sudo mv /data/admin.* .  # for backup
    sudo service mongod start
-=======================================================================================:w
+=====================================================================================:w
 
 #(C)reate
    db.createCollection(name, options)
@@ -70,8 +70,129 @@ roles: ["readWrite"]
    db.COLLECTION_NAME.remove({})  -> specify a property {name: 'user1'}
 
 
+=====================================================================================:w
 
+# mongodb
 
+## properties
+
+### document-oriented database
+
+* set of key-value pair
+	* unique id
+* ducument
+	* subdocument
+
+### dynamic schema (schemless)
+
+* schema
+	* document with similar scructure
+* not defined structure
+
+### types
+
+MongoDB supports many datatypes whose list is given below:
+
+String : This is most commonly used datatype to store the data. String in mongodb must be UTF-8 valid.
+
+Integer : This type is used to store a numerical value. Integer can be 32 bit or 64 bit depending upon your server.
+
+Boolean : This type is used to store a boolean (true/ false) value.
+
+Double : This type is used to store floating point values.
+
+Min/ Max keys : This type is used to compare a value against the lowest and highest BSON elements.
+
+Arrays : This type is used to store arrays or list or multiple values into one key.
+
+Timestamp : ctimestamp. This can be handy for recording when a document has been modified or added.
+
+Object : This datatype is used for embedded documents.
+
+Null : This type is used to store a Null value.
+
+Symbol : This datatype is used identically to a string however, it's generally reserved for languages that use a specific symbol type.
+
+Date : This datatype is used to store the current date or time in UNIX time format. You can specify your own date time by creating object of Date and passing day, month, year into it.
+
+Object ID : This datatype is used to store the documentâ€™s ID.
+
+Binary data : This datatype is used to store binay data.
+
+Code : This datatype is used to store javascript code into document.
+
+Regular expression : This datatype is used to store regular expression
+
+* retrictions collection names
+* restriction filed names
+* data types
+* object id (BSON)
+	* _id
+	* BSON (Binary encoded JSON)
+
+### no transactions
+
+* strategics to solve it
+
+### atomic write operations
+
+## features
+
+### scalability
+
+* horizontal scaling
+
+### index
+
+### load balancing
+
+### mapreduce
+
+### replication
+
+## structure example
+
+### db1
+
+* collection1
+* collection2
+* collection...
+
+### db2
+
+* collection1
+* collection2
+* collection...
+
+## Schema design
+
+### 0. Design your schema according to user requirements.
+
+### 1. Combine objects into one document if you will use them together. Otherwise separate them (but make sure there should not be need of joins).
+
+### 2. Duplicate the data (but limited) because disk space is cheap as compare to compute time.
+
+### 3. Do joins while write, not on read.
+
+### 4. Optimize your schema for most frequent use cases.
+
+### 5. Do complex aggregation in the schema
+
+### normalizion
+
+* normalizing data
+	* separate document
+	* minimalize redundandancy
+	* only single copy
+	* additional lookup
+	* performace issue
+* denormalizing data
+	* embed document
+	* one-to-one relation
+	* multiple copies
+	* increse size
+
+## Not Only SQL
 
 
 

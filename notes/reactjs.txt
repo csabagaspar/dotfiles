@@ -1,0 +1,250 @@
+reactjs
+
+
+# properties
+
+## this.state
+
+* setState
+	* is private to the component and can be changed by callingÂ this.setState(). When the state updates, the component re-renders itself.
+* immutable
+	* setState eseten csak imutable operatorokat hasznalunk, ha az elozobol kell kiindulni
+
+## this.props
+
+* are immutable
+* propTypes
+* defaultProps
+* children
+
+## mixins
+
+## statics
+
+## refs
+
+## this binding
+
+* do it in constructor in ES6 syntax
+* in Class sintax?
+
+## handler pass argument with bind
+
+## chilren component
+
+## use null for do nothing or render nothing
+
+## event handling
+
+###############################################################################################################################
+# component types
+
+## functional stateless component
+
+* no return as needed
+	* oneliner with ()
+* pass props as argument
+* no this
+* component only with render method
+* jsx in jsx
+
+## view component
+
+* pure component
+	* component without state like functional componet, need to push up the state becaouse application logic need to decide based on it
+
+## container component
+
+* fetch data from server
+
+
+###############################################################################################################################
+
+# how to create components
+
+## Step 1: break the UI into a component hierarchy
+
+* single responsibility princilple
+* often displaying a JSON data model to a user
+* dentified the components in our mock, let's arrange them into a hierarchy.
+
+## Step 2: Build a static version
+
+* takes your data model and renders the UI but has no interactivity
+	* The components will only haveÂ render()Â methods since this is a static version of your app.
+	* PROP
+
+## Step 3: Identify the minimal (but complete) representation of UI state
+
+* DRY:Â Don't Repeat Yourself
+* figure out which one is STATE
+
+
+	•*Is it passed in from a parent via props? If so, it probably isn't state.
+	*Does it change over time? If not, it probably isn't state.
+	*Can you compute it based on any other state or props in your component? If so, it's not state.
+
+## Step 4: Identify where your state should live
+
+* Next, we need to identify which component mutates, orÂ owns, this state.
+
+	For each piece of state in your application:
+
+		* Identify every component that renders something based on that state.
+		* Find a common owner component (a single component above all the components that need the state in the hierarchy).
+		* Either the common owner or another component higher up in the hierarchy should own the state.
+		* If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
+
+
+
+	new update
+
+## Step 5: Add inverse data flow
+
+* ReactLinkÂ to make this pattern as convenient as two-way binding
+
+###############################################################################################################################
+# lifecycle
+
+## shouldComponentUpdate(nexrProps, nextState)
+
+* ha egy listaban van komponens akkor annak a renderje nem fut ujra, ha nem valtozott a state
+
+## componentDidUpdate
+
+* lefoto function update utan pl: a fokuszt rarakom egy adott elemre
+	* this.refs.details.getDOMNode().focus();
+###############################################################################################################################
+# best practices
+
+## Keep your state flat
+
+* normalizer
+
+## immutable states
+
+* immutablejs
+
+## routing
+
+## Code splitting, lazy loading
+
+## components
+
+* use classes
+
+###############################################################################################################################
+# performace
+
+## key, value in list items
+###############################################################################################################################
+# flux
+
+## redux
+
+### dev how to
+
+#### setup project
+
+* npm init -y
+* index.html
+* webpack
+* babel
+* unit test support
+	* chai, mocha, jsdom, chai-immutable
+	* npm test, npm test:watch
+* react-hot-loader
+
+#### UI
+
+* create index.js
+* create the first and later second ... bigger react component
+	* add fake data as first props (inital data)
+		* can see the "static" result without behaviour
+	* robust: handle input props with default value
+	* create first unit test for functionality, unit test for callbacks
+		* can be a rendering test
+			* react-addons-test-utils
+				* renderIntoDocument
+				* scryRenderedDOMComponentsWithTag
+		* test callback behaviour, add a props as callback it appers only in init test
+			* callback click test etc.
+				* Simulate
+	* add fake data as second props (change the view of the component )
+		* fe: it will disabled
+		* rendeered diffrently
+		* setup an attriburte a HTML element
+		* if statemenst:D
+	* add an other second component and can remove previevlis one, for desingned purpose
+		* do the same as previlious
+		* if else, bloated components
+	* refactor
+		* create 2 ore more UI component
+		* create a common parent for this two
+	* test
+		* already implement unit test move to parent as the "unit" to test
+		* write unit test for the missing "props"
+		* inject pros through parent
+			* use ref to found them
+* pure components
+	* PureRenderMixin
+		* react-addons-pure-render-mixin
+	* use immutable
+* routing
+	* create main App which inject props temporally
+
+#### desing redux store
+
+* test for reducer
+	* implement reducer
+* add it to index.js
+	* add fake init it it comes from server
+* Provide
+	* components need to be "wired up"
+		* root (App)
+		* parent components or/ and routing component (connected/smart component)
+			* create container componet (add store for them)
+				* use as routing componet
+				* can keeep in one module smart comonent
+				* now can remove fake datas from root APP
+		* leaf component (pure/dumb component)
+* init store
+	* with real dispacahed action
+* add more test for reducers
+	* add action to connected componenst
+* add action creators
+
+#### add middleware
+
+* disting bettwen remote and local action
+
+### every request is a diffrent store?
+
+### components
+
+1. pure function
+const Todo = ({
+
+}) => (
+
+);
+
+nincs benne this!
+pass props in {}
+
+2.class
+class Todo extends Component
+
+van this
+
+#### presentation component
+
+a presentacios contener is tartalmazhat viselkedest Ã©s adatokat, ha egyszeru
+ez altalaban egy pure function
+
+#### container component
+
+provide data and behaviours for the presentation components
+ ez altalaban egy class
+
+## custom
