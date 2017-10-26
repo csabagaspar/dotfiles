@@ -20,7 +20,8 @@ reactjs
 * defaultProps
 * children
 
-## mixins
+## mixins in es5 / higher order component in es6
+
 
 ## statics
 
@@ -55,14 +56,43 @@ reactjs
 * component only with render method
 * jsx in jsx
 
-## view component,
+## view/presentation component,
 
 * pure component
 	* component without state like functional componet, need to push up the state becaouse application logic need to decide based on it
 
+
+a presentacios contener is tartalmazhat viselkedest Ã©s adatokat, ha egyszeru
+ez altalaban egy pure function
+
 ## container component
 
 * fetch data from server
+
+* provide data and behaviours for the presentation components
+ ez altalaban egy class
+
+
+
+
+
+1. pure function
+const Todo = ({
+
+}) => (
+
+);
+
+nincs benne this!
+pass props in {}
+
+2.class
+class Todo extends Component
+
+van this
+
+
+
 
 
 ###############################################################################################################################
@@ -227,31 +257,3 @@ reactjs
 
 ### every request is a diffrent store?
 
-### components
-
-1. pure function
-const Todo = ({
-
-}) => (
-
-);
-
-nincs benne this!
-pass props in {}
-
-2.class
-class Todo extends Component
-
-van this
-
-#### presentation component
-
-a presentacios contener is tartalmazhat viselkedest Ã©s adatokat, ha egyszeru
-ez altalaban egy pure function
-
-#### container component
-
-provide data and behaviours for the presentation components
- ez altalaban egy class
-
-## custom
