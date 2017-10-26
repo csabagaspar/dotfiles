@@ -3,16 +3,19 @@ reactjs
 
 # properties
 
+## initial state
+   • es6, in constructor use this.state=...
 ## this.state
 
 * setState
 	* is private to the component and can be changed by callingÂ this.setState(). When the state updates, the component re-renders itself.
+   • ha csal az egyik tulajdonsagat updatelem a state-nek akkor a tobbi nem valtozik
 * immutable
 	* setState eseten csak imutable operatorokat hasznalunk, ha az elozobol kell kiindulni
 
 ## this.props
 
-* are immutable
+   * are immutable
 * propTypes
 * defaultProps
 * children
@@ -24,31 +27,35 @@ reactjs
 ## refs
 
 ## this binding
+   •ha van egy event handling, akkor kell a bind
+   •handler pass argument with bind
 
-* do it in constructor in ES6 syntax
-* in Class sintax?
-
-## handler pass argument with bind
+   * do it in constructor in ES6 syntax
+      • this.handleAction = this.handleAction.bind(this)
+   * in Class sintax?
+## event handling(classon kivul kesz a scopja)
+      <button onClick = {this.handleAction.bind(this)}> Add </button>
 
 ## chilren component
 
-## use null for do nothing or render nothing
+## render
+   * use null for do nothing or render nothing
 
-## event handling
 
 ###############################################################################################################################
+
 # component types
 
 ## functional stateless component
 
 * no return as needed
-	* oneliner with ()
+	* oneliner with () ——>  let MyCom = props => ()
 * pass props as argument
 * no this
 * component only with render method
 * jsx in jsx
 
-## view component
+## view component,
 
 * pure component
 	* component without state like functional componet, need to push up the state becaouse application logic need to decide based on it
@@ -80,9 +87,9 @@ reactjs
 * figure out which one is STATE
 
 
-	•*Is it passed in from a parent via props? If so, it probably isn't state.
-	*Does it change over time? If not, it probably isn't state.
-	*Can you compute it based on any other state or props in your component? If so, it's not state.
+	•Is it passed in from a parent via props? If so, it probably isn't state.
+   Does it change over time? If not, it probably isn't state.
+ Can you compute it based on any other state or props in your component? If so, it's not state.
 
 ## Step 4: Identify where your state should live
 
