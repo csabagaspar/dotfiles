@@ -1,6 +1,7 @@
 reactjs
 
 
+###############################################################################################################################
 # properties
 
 ## initial state
@@ -38,9 +39,24 @@ reactjs
       <button onClick = {this.handleAction.bind(this)}> Add </button>
 
 ## chilren component
+   access child component, refs
 
 ## render
    * use null for do nothing or render nothing
+
+
+###############################################################################################################################
+# lifecycle
+
+## shouldComponentUpdate(nextProps, nextState)
+• ha egy listaban komponensek vannak, és az egyiket megvaltoztatom (szulo state, valtoztatas) akkor mindegyik a listaban ujrarenderelodik
+de ha ezt hasznalom akkot annak a renderje nem fut ujra, ha nem valtozott a state
+• minimal logika kell ide hogy ne legyen koltsegesebb mint a render()
+
+## componentDidUpdate
+
+* lefoto function update utan pl: a fokuszt rarakom egy adott elemre
+	* this.refs.details.getDOMNode().focus();
 
 
 ###############################################################################################################################
@@ -74,6 +90,7 @@ ez altalaban egy pure function
 
 
 
+## higher order component
 
 
 1. pure function
@@ -92,8 +109,28 @@ class Todo extends Component
 van this
 
 
+###############################################################################################################################
+# best practices
 
+## Keep your state flat
 
+* normalizer
+
+## immutable states
+
+* immutablejs
+
+## routing
+
+## Code splitting, lazy loading
+
+## components
+
+* use classes
+###############################################################################################################################
+# performace
+
+## key, value in list items
 
 ###############################################################################################################################
 
@@ -133,51 +170,104 @@ van this
 		* If you can't find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
 
 
-
 	new update
 
 ## Step 5: Add inverse data flow
 
 * ReactLinkÂ to make this pattern as convenient as two-way binding
 
-###############################################################################################################################
-# lifecycle
 
-## shouldComponentUpdate(nexrProps, nextState)
-
-* ha egy listaban van komponens akkor annak a renderje nem fut ujra, ha nem valtozott a state
-
-## componentDidUpdate
-
-* lefoto function update utan pl: a fokuszt rarakom egy adott elemre
-	* this.refs.details.getDOMNode().focus();
-###############################################################################################################################
-# best practices
-
-## Keep your state flat
-
-* normalizer
-
-## immutable states
-
-* immutablejs
-
-## routing
-
-## Code splitting, lazy loading
-
-## components
-
-* use classes
-
-###############################################################################################################################
-# performace
-
-## key, value in list items
 ###############################################################################################################################
 # flux
+Jellemzok:
+
+
+	* single directional data flow (unidirectional)
+	* data consistency easier find a bug, has a direction of flow
+	* views query Stores (not Models), and user interactions result in Actions that are submitted to a centralized single Dispatcher.
+	* The main difference between MVC and Flux is the separation of queries and updates
+	*  In Flux, the data that a View gets from a Store is read-only. Stores can only be updated through Actions, which would affect the Stores themselves not the read-only data.
+
+
+ .                   ,,,,,,,,,,,,,,,,,,,,,,,.,
+ .                   ,,,,,,,,,,,,,,,,,,,,,,,,, ................     .       .
+ ................../ ,,,,,,,, ACTIONS ,,,,,,,,, /........      .
+ .                   ,,,,,,,,,,,,,,,,,,,,,,,,,        .       .     /
+ .                   ,,,,,,,,,,,,,,,,,,,,,,,,,        .       .
+ .                               .                    .       .   /
+ .                               .                    .       .     /
+ .                               /                    .       .     /
+ .                   /////////////////////////        .       .     /
+ .                   /////////////////////////        .       .     /
+ .                   ////DISPATCHER      /////        .       .     /
+ .                   /////////////////////////        .       .     /
+ .                   ************(***********,        .       .     /
+ .                               .                    .       .     /
+ .                               .                    .       .     /
+ .                               /*                   .       .    /
+ .                   *************************        .       .     /
+ .                   *********,***************        .       .     /
+ .                   ********STORES  *,*********        .       .
+ .                   *************************        .       .     /
+ .                               .                    .       .     /
+ .                               .                    .       .     /
+ .                               .                    .       .     #*
+ .                               /                    .       /.     .
+ .                   (((((((((((((((((((((((((      */.///////./////////////////
+ .                   (((((((((/.,(((((((((((((      */.///////.//././,//////////
+ .                   ((((((( VIEWS     ((((((((      */./////API    //////////
+ ................... (((((((((((((((((((((((((      */.///////./////////////////
+
+Stores:
+
+	* hold data
+   • multiples stores
+	* signal when something changed
+	* emits a change and the views rerendered
+   • it is an event emitter
+	* Containers for application state & logic that have callbacks registered to the dispatcher
+   • every store register to dispacher
+
+
+Views:
+
+	* subscribe to the store
+	* readonly store data!!
+	* React Components that grab the state from Stores and pass it down via props to child components
+   • action creator function
+
+
+Actions
+
+	* things that happen
+   • action az egy literal payload
+	* Helper (action creators) methods that facilitate passing data to the Dispatcher
+	* view triggered actions and server/API triggered actions
+
+
+Dispacher
+
+	* every action passes thouth the dipacther
+	* handle actions one by one
+	* to the registered store
+	* make sure every Action invokes onDispatch on every Strore
+	* Receives actions and broadcasts payloads to registered callbacks
+   • notified the stores, if it interested update their notify the views
+
+
+API:
+
+	* data that is coming from (or going to) the outside
+
+
 
 ## redux
+• no multiple stores
+• no Dispacher, instead there will be a dispatch method
+• simple store with dispach method
+• reducerss
+
+# action creators
 
 ### dev how to
 
