@@ -1,0 +1,98 @@
+bash
+
+==========================================
+             BASH SCRIPTING                       	==========================================
+==========================================        	             TEST COMMAND
+                                                  	==========================================
+Invoke:      bash [options] file
+Shebang:     #!/usr/bin/env bash                  	Test:        test expression
+                                                  	  In script: [ expression ]
+==========================================        	  Alternate: [[ espression ]]
+             LOOP                                 	             Does not split string words
+==========================================        	             Does not expand pathglobs*
+
+for i in <list>; do echo $i; done                 	Expressions:
+                                                  	  True:      [ expression ]
+<list>:                                           	  False:     [! expression ]
+  FileSpec:  *.txt                                	  Value:     [ (expression) ]
+  Set:       1 2 3 4 5                            	  And:       [ exp1 -a exp2 ]   No Short
+  Range:     {start..end}       {1..5}            	  Or:        [ exp1 -o exp2 ]    Circuit
+             {start..end..increment}              	  Regex:     [[ value =~ regex ]]
+  Variable:  $words             "w1 w2 w3"        	                 regex w/out ": ^as.*$
+  Arguments: $*                                   	                 or variable  : $regex
+  Command:   `command args`
+                                                  	Comparisons:
+Each args:                                        	  String:    str1 op str2
+             for arg; do echo $arg; done          	             "$s1" op "$s2"
+                                                  	    Op:      ==  =  !=  <  >
+------------------------------------------        	  Numerical: num1 op num2
+                                                  	    Op:      -eq -ne -lt -le -gt -ge
+for (( exp1; exp2; exp3 ))                        	  Pattern    [[ "str1" == str* ]]
+for (( i=1; i<=5; i++ ))
+for ((i=1, j=10; i<=5 ; i++, j=j+5))              	Empty:       -z string          Zero-len.
+for (( ; ; ))                   Infinite!         	Not Empty:   -n string
+
+------------------------------------------        	File Tests:
+                                                  	  Exists:    -e file
+While:      while [ test ]; do                    	  Is File:   -f file
+               commands                           	  Is Dir:    -d file
+            done                                  	  Writable:  -w file
+  Infinite: while : ...                           	  Terminal:  -t FD              Std*
+
+Until:      until [ test ]; do                    	More:        man test
+               commands
+            done                                  	==========================================
+                                                  	PATTERNS & FILE GLOBS & REGULAR EXPRESSION
+------------------------------------------        	==========================================
+
+Exit loop:  break                                 	Pattern: (not extended regular expression)
+Next:       continue                              	  Any:      *
+                                                  	  Start/End:   *end   start*
+==========================================        	  Single:   ?
+             CONDITTIONAL                         	  Special:  \x
+==========================================        	  Brackets: [...]
+                                                  	    Set:    [chars]
+Syntax:                                           	    Range:  [char-char]
+             if [ tests... ];                     	    Class:  [[:class:]]
+             then <commands>;                     	    Not in: [^chars]
+             elif [ tests... ]; then <cmds>;      	  Alternate:(exp|exp)
+             else <commands>;
+             fi                                   	Extended REGEX for grep and "test =~":
+                                                  	  Character: [chars]
+1 Line:      [ test ] && ( commands )             	  Char Range:[char-char]
+Unless:      [ test ] || ( commands )             	  Any Char:  .
+                                                  	  Repetition:* + ? {n}
+Case:        case value in      use "$var"        	  Anchors    ^ $
+               pattern) commands ;;               	  Escape:    \char
+               *) commands ;;  else               	  Alternate: (exp|exp)
+             esac
+  See "Patterns" and "Test command"               	==========================================
+                                                  	             TEXT MANIPULATION
+==========================================        	==========================================
+             FILE PROCESSING
+==========================================        	Length:      ${#var}
+                                                  	Substring:   ${var:start:len}   first=0
+Read STDIN:  while read varname; do...            	             ${var:start}       to end
+Filename:    while read varname; do
+               statements...                      	Default:     ${var-default} ${var:-default}
+             done < $filename                     	  Can be:          literal, $var, `cmd`
+                                                  	Set to Default: ${var=default}
+Slurp:       var=`cat $filename`                  	  Like:         $var = ${var-default}
+                                                  	Alternate:   ${var+alt_value}
+ReplaceFile: echo $data > $file                   	  Like:         $var ? alt_value : ""
+Truncate:    echo -n "" > $file                   	Die:         ${var?errmsg}
+  Or:        truncate -s 0 $file                  	  Like:         die errmsg unless $var
+Write/Append: echo $line >> $file
+                                                  	Strip Lead:  ${var#Pattern}    shortest
+                                                  	             ${var##Pattern}   longest
+                                                  	String End:  ${var%Pattner}    shortest
+                                                  	             ${var%%`attern}   longest
+
+                                                  	Replace:     ${var/Pattern/Replace}
+                                                  	  Global:    ${var//Pattern/Replace}
+                                                  	  Prefix:    ${var/#Pattern/Replace}
+                                                  	  Suffix:    ${var/%Pattern/Replace}
+
+                                                  	Variable globbing, returns matching varnames
+                                                  	  Prefix:    ${!varprefix*} ${!varprefix@}
+                                                  	  Ex:        for var in ${!namespace*}; ...

@@ -1,0 +1,7 @@
+mvc
+
+* Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.
+	* The "View" part of Model-View-Controller
+	* coupling
+	*
+		* defines a very decoupled interface that allows for multiple receivers to be configured at run-time.

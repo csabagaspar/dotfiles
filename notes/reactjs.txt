@@ -248,7 +248,8 @@ Actions
 Dispacher
 
 	* every action passes thouth the dipacther
-	* handle actions one by one
+   • singleton
+	* handle actions one by one (queue)
 	* to the registered store
 	* make sure every Action invokes onDispatch on every Strore
 	* Receives actions and broadcasts payloads to registered callbacks

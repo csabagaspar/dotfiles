@@ -1,0 +1,78 @@
+package.json
+
+# NPM
+npm config set msvs_version 2015 --global
+
+--msvs_version=2015
+
+# SERVER:
+
+npm i -SD babel-cli babel-preset-env
+
+.babelrc
+{
+  "presets": ["env"]
+}
+
+"prestart": "babel src --out-dir dist",
+"start": "node dist/index.js",
+"dev": "babel-node src/index.js",
+
+
+npm i -SD nodemon
+
+"monitor": "nodemon --exec npm run dev"
+
+
+SERVER (loopback):
+"nsp": "nsp check"
+
+# CLIENT (react-webpack):
+
+
+npm i -SD babel-cli babel-preset-env
+npm i -SD babel-preset-react
+npm i -S react react-dom react-router
+
+npm i -SD webpack webpack-dev-server html-webpack-plugin babel-loader
+
+"dev": "webpack-dev-server --config webpack.config.dev.js",
+
+.babelrc
+{
+  "presets": ["env", "react"]
+}
+
+# TEST:
+npm i -SD chai mocha supertest
+npm i -SD chai-as-promised supertest-as-promised
+npm i -SD jsdom
+npm i -SD cucumber
+
+"test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js  --recursive",
+"test:watch": "npm run test -- --watch",
+
+"cucumber": "babel-node node_modules/cucumber/bin/cucumber.js test",
+
+import {assert, expect} from 'chai'
+
+global.assert = assert
+global.expect = expect
+
+
+
+
+# STYLE:
+npm i -SD standard snazzy
+
+"standard": {
+    "globals": [
+      "describe",
+      "it",
+      "expect"
+    ]
+},
+
+"standard": "standard --verbose | snazzy",
+"standard:fix": "standard --fix"
+
