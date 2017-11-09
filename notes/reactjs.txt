@@ -27,6 +27,17 @@ reactjs
 ## statics
 
 ## refs
+ • controlled input : <input type="text" ref={input => this._name = input} />
+  and pull it if needed: handleSubmitClick = () => {
+    const name = this._name.value;
+    // do something with `name`
+  }
+  • controlled:
+     ◦ react way: store in state: <input
+          type="text"
+          value={this.state.name}
+          onChange={this.handleNameChange}
+        />
 
 ## this binding
    •ha van egy event handling, akkor kell a bind
