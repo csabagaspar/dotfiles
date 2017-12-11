@@ -1,6 +1,6 @@
 package.json
 
-# NPM
+# NPM:
 npm config set msvs_version 2015 --global
 
 --msvs_version=2015
@@ -59,8 +59,35 @@ import {assert, expect} from 'chai'
 global.assert = assert
 global.expect = expect
 
+# UPDATE package.json
+npm i -g npm-check-updates
+npm-check-updates -u
+npm install
+
+#FLOW
+
+.babelrc
+{
+  "presets": ["env", "react", “flow”]
+}
 
 
+# ESLINT
+npm install eslint --save-dev
+• React
+npm install eslint-plugin-react --save-dev
+.eslintrc
+{
+  "plugins": [
+    "react"
+  ],
+  "extends": ["plugin:react/all"]
+}
+
+• standard
+{
+  "extends": ["standard"]
+}
 
 # STYLE:
 npm i -SD standard snazzy

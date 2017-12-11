@@ -5,7 +5,7 @@ reactjs
 # properties
 
 ## initial state
-   • es6, in constructor use this.state=...
+   • es6, in constructor use this.state= {}
 ## this.state
 
 * setState
@@ -32,7 +32,7 @@ reactjs
     const name = this._name.value;
     // do something with `name`
   }
-  • controlled:
+  • controlled:.
      ◦ react way: store in state: <input
           type="text"
           value={this.state.name}

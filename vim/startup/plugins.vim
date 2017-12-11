@@ -15,7 +15,9 @@ let g:javascript_conceal_underscore_arrow_function = "🞅"
 
 
 "ctrlpvim/ctrlp.vim
-let g:ctrlp_working_path_mode = 'ra'
+let g:ctrlp_working_path_mode = ''
+let g:ctrlp_max_files=0
+let g:ctrlp_max_depth=40
 let g:ctrlp_custom_ignore = {'dir':  '\v[\/]\.(git|svn)$','file': '\v\.(exe|so|dll)$'}
 
 "scrooloose/nerdtree
