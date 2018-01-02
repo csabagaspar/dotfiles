@@ -274,12 +274,17 @@ API:
 
 
 ## redux
+• imutable state tree, has to return a new object no modify
+• only pure function
+• descrbe state change with action
 • no multiple stores
 • no Dispacher, instead there will be a dispatch method
 • simple store with dispach method
 • reducerss
 
 # action creators
+   • state only with action
+   •
 
 ### dev how to
 
