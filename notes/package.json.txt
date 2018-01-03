@@ -5,6 +5,8 @@ npm config set msvs_version 2015 --global
 
 --msvs_version=2015
 
+                                     * * *
+
 # SERVER:
 
 npm i -SD babel-cli babel-preset-env
@@ -27,7 +29,9 @@ npm i -SD nodemon
 SERVER (loopback):
 "nsp": "nsp check"
 
-# CLIENT (react-webpack):
+                                     * * *
+
+*# CLIENT (react-webpack):
 
 
 npm i -SD babel-cli babel-preset-env
@@ -43,7 +47,9 @@ npm i -SD webpack webpack-dev-server html-webpack-plugin babel-loader
   "presets": ["env", "react"]
 }
 
-# TEST:
+                                     * * *
+
+*# TEST:
 npm i -SD chai mocha supertest
 npm i -SD chai-as-promised supertest-as-promised
 npm i -SD jsdom

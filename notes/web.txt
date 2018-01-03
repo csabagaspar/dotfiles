@@ -1,0 +1,199 @@
+web
+
+                                    * * *
+web
+	dev
+		server communication
+			technics
+				graphql
+					declerativ
+					single get
+					hierachical data
+					query
+						JSON without values
+							easy
+							query describe the result
+							field argument
+							alias
+					mutation
+					principles
+						mental model
+						no changes in server side
+						up to date document
+						composable query an reusable
+						mutation same as queries
+				REST
+					imperative
+						ask questions
+						combine them
+			event soucing
+			CRUD
+				CUD websocket
+				Concurency
+			consider work with databses
+				fechning REST problems
+					under feching
+					over feching
+
+Optimization: optimistic updates
+
+
+
+server communication at same level in same component
+?
+				batching
+				pagination
+				caching
+				rollbacks
+				retries
+				error handling
+				amig toltodnek az adatok es nem tudunk mejeleniteni ui components addig mosogep:)
+			routing
+			cache
+				redis
+			asset loading
+		UI communication
+			handla to much click
+				settimeout
+			event handling
+				callbacks
+				register callbacks  'array'
+					reduce
+		config
+	WEB API (DOM) https://developer.mozilla.org/en-US/docs/Web/API
+		DOM interfaces
+			Window
+			Document
+			fetch
+			xht
+		HTML interfaces
+		SVG interfaces
+	javascript
+		browser js engine
+			document
+			window
+			console
+		nodejs (v8)
+			properties
+				How to access more info
+
+					global
+					process
+					console
+					group
+						require
+				fds
+
+Clusters: Fork processes like a pro
+
+
+
+Handling async errors: AsyncWrap, Domain and uncaughtException
+
+
+
+Event loop
+
+
+
+non-blocking I/O
+
+
+						async
+					 blocking I/O
+						sync
+				group
+					REPL
+		javascript patterns
+			module patterns
+				Â AMDÂ (Asynchronous Module Definition)
+					define
+				COMMONJS
+					require
+				UMD (Universal Module Definition)
+			thunk
+				sync
+				async
+		node patterns
+			singleton https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/singleton.spec.js
+				object
+				closure
+				module export
+			Constructors https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/constructor.spec.js
+				when you need to use an object type many times across many separate requests
+			Factory Functions https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/functionfactory.spec.js
+				can hide  creation details in usage, Factories allow us to separate our data from our computations.
+					can refactor without breking any code
+					can create diffrent type of  "factory switch"
+						can create instance in diffrent mode
+						Â when the creation process is complex
+					can refactor the class into smaller ones safety
+				async factory
+					with promise
+
+Streams and buffers: Effective way to work with data
+
+
+			middleware/pipelining pattern
+			Dependency Injection
+			Observers https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/observer.spec.js
+			modularizeÂ https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/modulepattern/module.spec.js
+				commonjs based
+				singleton based
+		anti pattern
+			button handler
+				click handler is a global function
+		aync programing
+
+callback pattern
+
+
+
+node callback conventions
+
+
+- error 1st argument, null if everything is okay
+
+
+
+data is the second argument
+
+
+
+callback is the last argument
+
+
+				named function
+				callback hell or pyramid of doom
+			promise
+			events
+
+event emitters
+
+			streams
+	UI element
+		dialogs
+			modal
+			modeless
+	security
+	http
+		protocol
+		http status codes
+		session handling
+			cookie based store
+			server side store
+				built-in memory store
+				redis store
+				mongo store
+		asset loading
+	web patterns
+		MVVP
+		MVP
+		Flux
+			redux
+			relay
+				data driven application
+		MVC
+		data flow
+			one-way data flow
+			two-way data flow
