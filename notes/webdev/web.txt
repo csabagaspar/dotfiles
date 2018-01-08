@@ -1,7 +1,21 @@
 web
 
                                     * * *
-web
+
+web patterns
+		MVVP
+		MVP
+		Flux
+			redux
+			relay
+				data driven application
+		MVC
+	data flow
+			one-way data flow
+			two-way data flow
+
+                                     * * *
+
 	dev
 		server communication
 			technics
@@ -186,14 +200,3 @@ event emitters
 				redis store
 				mongo store
 		asset loading
-	web patterns
-		MVVP
-		MVP
-		Flux
-			redux
-			relay
-				data driven application
-		MVC
-		data flow
-			one-way data flow
-			two-way data flow
