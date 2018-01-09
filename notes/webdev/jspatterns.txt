@@ -1,0 +1,44 @@
+jspatterns
+
+
+                                    * * *
+
+		javascript patterns
+			module patterns
+				Â AMDÂ (Asynchronous Module Definition)
+					define
+				COMMONJS
+					require
+				UMD (Universal Module Definition)
+			thunk
+				sync
+				async
+		node patterns
+			singleton https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/singleton.spec.js
+				object
+				closure
+				module export
+			Constructors https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/constructor.spec.js
+				when you need to use an object type many times across many separate requests
+			Factory Functions https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/functionfactory.spec.js
+				can hide  creation details in usage, Factories allow us to separate our data from our computations.
+					can refactor without breking any code
+					can create diffrent type of  "factory switch"
+						can create instance in diffrent mode
+						Â when the creation process is complex
+					can refactor the class into smaller ones safety
+				async factory
+					with promise
+
+Streams and buffers: Effective way to work with data
+
+
+			middleware/pipelining pattern
+			Dependency Injection
+			Observers https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/observer.spec.js
+			modularizeÂ https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/modulepattern/module.spec.js
+				commonjs based
+				singleton based
+		anti pattern
+			button handler
+				click handler is a global function

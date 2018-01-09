@@ -11,7 +11,7 @@ indent_style = space
 indent_size = 2
 max_line_length = 80
 
-[*.css]
+[*.{css,less}]
 indent_style = space
 indent_size = 4
 max_line_length = 40
@@ -26,3 +26,8 @@ trim_trailing_whitespace = false
 
 [*.{sql,hql}]
 insert_final_newline = false
+
+[.*rc]
+indent_style = space
+indent_size = 2
+max_line_length = 80

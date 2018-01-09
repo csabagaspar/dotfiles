@@ -1,0 +1,12 @@
+webapi
+
+                                    * * *
+
+	WEB API (DOM) https://developer.mozilla.org/en-US/docs/Web/API
+		DOM interfaces
+			Window
+			Document
+			fetch
+			xht
+		HTML interfaces
+		SVG interfaces
