@@ -1,7 +1,7 @@
 javascript
 
+# basic
 
-                                    * * *
 
 	javascript
 		browser js engine
@@ -39,7 +39,8 @@ non-blocking I/O
 						sync
 				group
 					REPL
-aync programing
+
+# aync programing
 
 callback pattern
 
@@ -107,3 +108,8 @@ process.cwd(): Get current working directory. Not to be confused with __dirname 
 
 process.exit(): Exit current process. You can pass code like 0 or 1.
 process.on(): Attach an event listener, e.g., `on(‘uncaughtException’)
+
+                                     * * *
+
+# javascript vs java
+   • valami
