@@ -19,11 +19,12 @@ javascript
 						require
 				fds
 
-Clusters: Fork processes like a pro
+            Clusters: Fork processes like a pro
 
 
 
-Handling async errors: AsyncWrap, Domain and uncaughtException
+
+         Handling async errors: AsyncWrap, Domain and uncaughtException
 
 
 
@@ -69,10 +70,13 @@ event emitters
 
 			streams
 
-                                     * * *
+
+# javascript vs java
+   • no static structure, nem kell importalni ha mar mashol hasznalom
+   • a "static" structura segit a karbantartasban
 
 
-
+# node: global and process
 
 global.process:
 
@@ -108,8 +112,3 @@ process.cwd(): Get current working directory. Not to be confused with __dirname 
 
 process.exit(): Exit current process. You can pass code like 0 or 1.
 process.on(): Attach an event listener, e.g., `on(‘uncaughtException’)
-
-                                     * * *
-
-# javascript vs java
-   • valami

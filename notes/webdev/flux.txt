@@ -1,10 +1,7 @@
 flux
-
-
                                     * * *
-
 # flux
-Jellemzok:
+## Jellemzok:
 
 
 	* single directional data flow (unidirectional)
@@ -84,5 +81,6 @@ Dispacher
 API:
 
 	* data that is coming from (or going to) the outside
+
 
 

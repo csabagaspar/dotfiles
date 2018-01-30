@@ -1,11 +1,7 @@
 jspatterns
-
-
                                     * * *
-
-		javascript patterns
-			module patterns
-				Â AMDÂ (Asynchronous Module Definition)
+# module patterns
+    AMDÂ (Asynchronous Module Definition)
 					define
 				COMMONJS
 					require
@@ -13,7 +9,7 @@ jspatterns
 			thunk
 				sync
 				async
-		node patterns
+#  node patterns
 			singleton https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/singleton.spec.js
 				object
 				closure
@@ -39,6 +35,7 @@ Streams and buffers: Effective way to work with data
 			modularizeÂ https://github.com/csabagaspar/sandboxes/blob/master/javascript/test/patterns/modulepattern/module.spec.js
 				commonjs based
 				singleton based
-		anti pattern
+
+# anti pattern
 			button handler
 				click handler is a global function

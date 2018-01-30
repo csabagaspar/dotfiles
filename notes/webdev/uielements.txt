@@ -11,6 +11,25 @@ UI communication
 
                                      * * *
 
-UI element
- • dialogs(modal, modeless)
- •
+# UI element
+  ## dialogs(modal, modeless)
+
+## Button
+
+	* default
+	* hidden
+	* hidden active focus
+	* disabled
+	* hover
+	* hidden hover
+	* toggle on
+	* toogle on focus
+	* alt1 toggle on/active
+	* alt2 toggle on/active
+	* focus
+	* hidden focus
+	* active
+	* active-focus
+	* hidden active-focus
+
+
