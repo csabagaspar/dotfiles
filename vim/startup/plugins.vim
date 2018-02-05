@@ -47,7 +47,7 @@ let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabContextDefaultCompletionType = "context"
 
 runtime macros/matchit.vim
-let delimitMate_expand_cr = 1
+"let delimitMate_expand_cr = 1
 
 " vertical line indentation
 let g:indentLine_color_term = 239
