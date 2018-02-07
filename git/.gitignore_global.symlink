@@ -22,3 +22,18 @@ target
 bundle.js
 bundle.js.map
 npm-debug.log
+
+# Java Excludes #
+.project
+.classpath
+.settings
+target/
+*/target/**
+*/target/
+.gitignore
+.DS_Store
+*.log
+*.java~
+*.java.swp
+*.xml~
+*.xml.swp

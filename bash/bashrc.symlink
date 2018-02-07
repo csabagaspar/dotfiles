@@ -1,3 +1,4 @@
+
 VISUAL=vim
 EDITOR="$VISUAL"
 TERM=xterm-256color
