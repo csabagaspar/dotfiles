@@ -14,6 +14,8 @@ if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
 fi
 if [ "$(uname)" == "Linux" ]; then
     echo -e "\n\nRunning on Linux"
+
+    source install/linux.sh
 fi
 
 echo "=============================="
