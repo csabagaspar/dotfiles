@@ -14,3 +14,5 @@ export GIT_PS1_SHOWCOLORHINTS=true
 if [ -f ~/.bash_aliases ] ; then
   source  ~/.bash_aliases
 fi
+
+export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
