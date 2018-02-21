@@ -1,6 +1,5 @@
 git config --global user.name "csabagaspar"
 git config --global user.email "gaspar.csaba@gmail.com"
-git config --global credential.helper "wincred"
 git config --global core.longpaths "true"
 git config --global push.default "upstream"
 git config --global core.excludesfile "$HOME/.gitignore_global"
