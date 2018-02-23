@@ -16,6 +16,7 @@ git config --global alias.cm "commit -m"
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative | tail -n 10"
 git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
 git config --global alias.wsdiff "diff --ignore-space-at-eol -w -b --no-ext-diff"
+git config --global alias.sdiff "diff --staged"
 git config --global core.autocrlf "input"
 
 git config --global core.editor "vim"
