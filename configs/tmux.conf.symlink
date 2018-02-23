@@ -36,8 +36,8 @@ set-option -g display-panes-colour colour166 #orange
 set-window-option -g clock-mode-colour colour64 #green
 
 # bell
-set-window-option -g window-status-bell-style fg=colour235 #base02
-set-window-option -g window-status-bell-style bg=colour160 #red
+#set-window-option -g window-status-bell-style fg=colour235 #base02
+#set-window-option -g window-status-bell-style bg=colour160 #red
 
 #KEY BINDING
 # reload config file
@@ -67,13 +67,13 @@ set -g base-index 1
 set -g pane-base-index 1
 
 # Bind function keys.
-bind -n F1 select-window -t 1
-bind -n F2 select-window -t 2
-bind -n F3 select-window -t 3
-bind -n F4 select-window -t 4
-bind -n F5 select-window -t 5
-bind -n F6 select-window -t 6
-bind -n F7 select-window -t 7
-bind -n F8 select-window -t 8
-bind -n F9 select-window -t 9
-bind -n F10 select-window -t 0
+bind -n M-0 select-window -t 0
+bind -n M-1 select-window -t 1
+bind -n M-2 select-window -t 2
+bind -n M-3 select-window -t 3
+bind -n M-4 select-window -t 4
+bind -n M-5 select-window -t 5
+bind -n M-6 select-window -t 6
+bind -n M-7 select-window -t 7
+bind -n M-8 select-window -t 8
+bind -n M-9 select-window -t 9

@@ -18,7 +18,7 @@ git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
 git config --global alias.wsdiff "diff --ignore-space-at-eol -w -b --no-ext-diff"
 git config --global core.autocrlf "input"
 
-git config --global core.editor "C:/cygwin64/usr/local/bin/vim"
+git config --global core.editor "vim"
 git config --global merge.tool "vimdiff"
 git config --global merge.conflictstyle "diff3"
 git config --global mergetool.prompt "false"
