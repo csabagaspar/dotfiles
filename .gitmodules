@@ -61,6 +61,3 @@
 [submodule "vim/bundle/vim-largefile.git"]
 	path = vim/bundle/vim-largefile.git
 	url = https://github.com/jreybert/vim-largefile.git
-[submodule "vim/bundle/vim-multiple-cursors.git"]
-	path = vim/bundle/vim-multiple-cursors.git
-	url = https://github.com/terryma/vim-multiple-cursors.git
