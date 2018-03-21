@@ -14,7 +14,7 @@ max_line_length = 80
 [*.{css,less}]
 indent_style = space
 indent_size = 4
-max_line_length = 40
+max_line_length = 80
 
 [*.{java,gradle}]
 indent_style = tab

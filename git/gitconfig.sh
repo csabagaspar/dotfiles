@@ -3,6 +3,7 @@ git config --global user.email "gaspar.csaba@gmail.com"
 git config --global core.longpaths "true"
 git config --global push.default "upstream"
 git config --global core.excludesfile "$HOME/.gitignore_global"
+git config --global http.postBuffer "157286400"
 
 git config --global alias.a "add"
 git config --global alias.aa "add ."
