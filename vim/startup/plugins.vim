@@ -1,13 +1,16 @@
 "pangloss/vim-javascript
-"let g:javascript_plugin_flow = 1
-"let g:javascript_conceal_function             = "λ"
-"let g:javascript_conceal_null                 = "ø"
+"let g:javascript_conceal_function             = "
+"let g:javascript_conceal_null                 = ""
 "let g:javascript_conceal_this                 = "@"
-"let g:javascript_conceal_return               = "<"
-"let g:javascript_conceal_undefined            = "¿"
-"let g:javascript_conceal_prototype            = "¶"
-"let g:javascript_conceal_static               = "•"
-"let g:javascript_conceal_super                = "Ω"
+"let g:javascript_conceal_return               = ""
+"let g:javascript_conceal_undefined            = "
+"let g:javascript_conceal_NaN                  = ""
+"let g:javascript_conceal_prototype            = "
+"let g:javascript_conceal_static               = ""
+"let g:javascript_conceal_super                = "
+"let g:javascript_conceal_arrow_function       = ""
+"let g:javascript_conceal_noarg_arrow_function = "
+"let g:javascript_conceal_underscore_arrow_function = ""
 
 
 "ctrlpvim/ctrlp.vim
@@ -55,3 +58,10 @@ map <Leader> <Plug>(easymotion-prefix)
 "vim-notes
 let g:notes_directories = ['~/dotfiles/notes']
 let g:notes_suffix = '.txt'
+"ale
+let g:ale_enabled = 0
+map <leader>ale :ALEToggle<CR>
+map <leader>alef :ALEFix<CR>
+let g:ale_linters = {'javascript': ['standard', 'eslint'],}
+let g:ale_fixers = {'javascript': ['standard', 'eslint'],}
+
