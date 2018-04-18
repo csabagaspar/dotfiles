@@ -29,21 +29,41 @@ redux
                                      * * *
 
 ### dev how to
+# redux react refactor (extracting presentation components)
+ 1. a bigger component, or more (call root component )
+  • with data and behavior
+2. refactor it into smaller ones
+   • with only props
+
+FE1: comp1 —> TodoList —> Todo
+   cont.com -> prez.comp -> prez.comp
+   todos ->props.todos —> props.todo
+  dispach() onTodoClick —> ()=> onTodoClick(todo.id) —> props.onClick
+
+FE2:
+   comp1 —> AddTodo(input comp)
+   cont.com —> prez-com
+   no data —> no data as input porps
+   disapcth action —> props click
+SUMMARY:
+• all store and callbakc dispach action are in comp1
+• all store and calback action  should go minden komponensen at kell menni amig
+eler a vegere
+
+# redux refactor (extract container component)
+
+FE1:
+   comp1- > VisibleTodoList —> TodoList —> Todo
+   ? —>cont, —> prez —> prez
+
+FE2:
+   comp1 -> Footer —> FilterLink —> Link
+   ?  —> prez.c —> cont.com  —> prez.com
+   ?  —> input             —> receive props, from prez, def action callback, and store —>
+                pros.callback and data
 
 #### setup project
 
-* npm init -y
-* index.html
-* webpack
-* babel
-* unit test support
-	* chai, mocha, jsdom, chai-immutable
-	* npm test, npm test:watch
-* react-hot-loader
-
-#### UI
-
-* create index.js
 * create the first and later second ... bigger react component
 	* add fake data as first props (inital data)
 		* can see the "static" result without behaviour
