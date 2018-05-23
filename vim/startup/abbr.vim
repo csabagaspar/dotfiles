@@ -9,3 +9,7 @@ abbr tryb try {<CR>} catch (Exception ex) {<CR> ex.printStackTrace();<CR>}<esc>h
 
 abbr ctm System.currentTimeMillis()
 abbr sleept try {<CR> Thread.sleep();<CR>}<esc>hxA catch(Exception ex) {<CR> ex.printStackTrace();<CR>}<esc>hx3k$hi
+
+"react
+abbr impr import React from 'react'
+abbr impp import PropTypes from 'prop-types'

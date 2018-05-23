@@ -1,4 +1,5 @@
 # Dotfiles
+ * set proxy
 Set
  * git config --global core.autocrlf input
 before clonning.

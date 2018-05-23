@@ -1,4 +1,3 @@
-
 #!/usr/bin/env bash
 
 if test ! $(which apt-get); then
@@ -8,10 +7,12 @@ else
   echo -e "\n\nInstalling apt-get packages..."
   echo "=============================="
 
-  apt-get update
+  sudo apt-get update
 
 
   formulas=(
+  zip
+  unzip
   tmux
   vim
   wget
@@ -19,16 +20,16 @@ else
   )
 
   for formula in "${formulas[@]}"; do
-    if [[ $(apt list --installed) == *"$formula"* ]]; then
+    if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
       echo "$formula already installed... skipping."
     else
-      apt-get install $formula
+      sudo apt-get install $formula
     fi
   done
 
-  curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
+  sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
   echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
-  apt-get update && apt-get install --no-install-recommends yarn
+  sudo apt-get install --no-install-recommends yarn
 
   curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh" | bash
   curl -s "https://get.sdkman.io" | bash
