@@ -67,3 +67,6 @@
 [submodule "vim/bundle/emmet-vim.git"]
 	path = vim/bundle/emmet-vim.git
 	url = https://github.com/mattn/emmet-vim.git
+[submodule "vim/bundle/typescript-vim.git"]
+	path = vim/bundle/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim.git
