@@ -16,9 +16,6 @@
 [submodule "vim/bundle/vim-airline-themes.git"]
 	path = vim/bundle/vim-airline-themes.git
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "vim/bundle/hive.vim.git"]
-	path = vim/bundle/hive.vim.git
-	url = https://github.com/autowitch/hive.vim.git
 [submodule "vim/bundle/tern_for_vim.git"]
 	path = vim/bundle/tern_for_vim.git
 	url = https://github.com/ternjs/tern_for_vim.git
@@ -40,9 +37,6 @@
 [submodule "vim/bundle/html5.vim.git"]
 	path = vim/bundle/html5.vim.git
 	url = https://github.com/othree/html5.vim.git
-[submodule "vim/bundle/csv.vim.git"]
-	path = vim/bundle/csv.vim.git
-	url = https://github.com/vim-scripts/csv.vim.git
 [submodule "vim/bundle/vim-notes.git"]
 	path = vim/bundle/vim-notes.git
 	url = https://github.com/xolox/vim-notes.git
@@ -52,9 +46,6 @@
 [submodule "vim/bundle/vim-jsx.git"]
 	path = vim/bundle/vim-jsx.git
 	url = https://github.com/mxw/vim-jsx.git
-[submodule "vim/bundle/vim-colors-solarized.git"]
-	path = vim/bundle/vim-colors-solarized.git
-	url = https://github.com/altercation/vim-colors-solarized.git
 [submodule "vim/bundle/vim-largefile.git"]
 	path = vim/bundle/vim-largefile.git
 	url = https://github.com/jreybert/vim-largefile.git
