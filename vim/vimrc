@@ -64,9 +64,9 @@ set foldmethod=indent
 set nofoldenable
 set foldlevel=0
 
-"set background=dark
+set background=dark
 colorscheme dracula
-"set t_Co=256
+set t_Co=256
 set timeout timeoutlen=1000 ttimeoutlen=0
 let g:indentLine_setConceal = 0
 
