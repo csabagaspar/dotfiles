@@ -58,10 +58,7 @@ map <Leader> <Plug>(easymotion-prefix)
 "vim-notes
 let g:notes_directories = ['~/dotfiles/notes']
 let g:notes_suffix = '.txt'
-"ale
-let g:ale_enabled = 0
-map <leader>ale :ALEToggle<CR>
-map <leader>alef :ALEFix<CR>
-let g:ale_linters = {'javascript': ['standard', 'eslint'],}
-let g:ale_fixers = {'javascript': ['standard', 'eslint'],}
 
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"

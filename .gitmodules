@@ -34,9 +34,6 @@
 [submodule "vim/bundle/ultisnips.git"]
 	path = vim/bundle/ultisnips.git
 	url = https://github.com/SirVer/ultisnips.git
-[submodule "vim/bundle/vim-snippets.git"]
-	path = vim/bundle/vim-snippets.git
-	url = https://github.com/honza/vim-snippets.git
 [submodule "vim/bundle/delimitMate.git"]
 	path = vim/bundle/delimitMate.git
 	url = https://github.com/Raimondi/delimitMate.git
