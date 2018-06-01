@@ -53,12 +53,11 @@ let g:indentLine_color_term = 239
 let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '¦'
 
-"easy motion
-map <Leader> <Plug>(easymotion-prefix)
 "vim-notes
 let g:notes_directories = ['~/dotfiles/notes']
 let g:notes_suffix = '.txt'
 
+"ultisnip
+let g:UltiSnipsSnippetsDir="~/dotfiles/vim/ultisnips"
+let g:UltiSnipsSnippetDirectories=["ultisnips"]
 let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"

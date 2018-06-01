@@ -90,11 +90,3 @@ augroup omnifuncs
 "	autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 	autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 augroup end
-
-
-" for .hql files
-au BufNewFile,BufRead *.hql set filetype=hive expandtab
-"
-" " for .q files
-au BufNewFile,BufRead *.q set filetype=hive expandtab
-
