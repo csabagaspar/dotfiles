@@ -10,46 +10,77 @@ snippet irc
 import React, { Component } from 'react'
 endsnippet
 
-snippet idr
-import { render } from 'react-dom'
+#Lifecycle
+#mount
+#1
+snippet ctor
+constructor(props) {
+  super(props)
+    ${1}
+}
 endsnippet
 
+#2
+snippet gdsfp
+static getDerivedStateFromProps(props, state){
+  ${1}
+}
+endsnippet
+
+#3
+snippet ren
+render() {
+  return (
+      ${1:<div />}
+  )
+}
+endsnippet
+
+#4
 snippet cdm
 componentDidMount() {
   ${1}
 }
 endsnippet
 
-snippet cdup
-componentDidUpdate(prevProps, prevState) {
-  ${1}
-}
-endsnippet
-
+#update
+#2
 snippet scu
 shouldComponentUpdate(nextProps, nextState) {
   ${1}
 }
 endsnippet
 
-snippet cwun
+#4
+snippet gsbu
+getSnapshotBeforeUpdate(prevProps, prevState) {
+  ${1}
+}
+endsnippet
+
+#5
+snippet cdu
+componentDidUpdate(prevProps, prevState, snapshot) {
+  ${1}
+}
+endsnippet
+
+#unmount
+snippet cwu
 componentWillUnmount() {
   ${1}
 }
 endsnippet
 
-snippet fup
-forceUpdate(${1:callback});
-endsnippet
-
-
-snippet st
-state = {
-  ${1}: ${2},
+#errorhandling
+snippet cdc
+componentDidCatch(){
+  ${1}
 }
 endsnippet
 
 
+#react members
 snippet rcc
 class ${1:ClassName} extends React.Component {
   render() {
@@ -60,37 +91,16 @@ class ${1:ClassName} extends React.Component {
 }
 endsnippet
 
-snippet rdr
-render(${1}, ${2})
-endsnippet
 
-snippet ercc
-  export default class ${1:ClassName} extends React.Component {
-    render() {
-      return (
-          ${0:<div />}
-          )
-    }
-  }
-endsnippet
-
-snippet ctor
-constructor() {
-  super()
-    ${1}
+snippet st
+state = {
+  ${1}: ${2},
 }
 endsnippet
 
-snippet ren
-render() {
-  return (
-      ${1:<div />}
-  )
-}
-endsnippet
 
 snippet sst
-this.setState(() = > ({
+this.setState((prevState, props) = > ({
   ${1}: ${2}
 })
 endsnippet
@@ -109,7 +119,7 @@ snippet dp "Default Props" b
     }
 endsnippet
 
-#Props
+#PropTypes
 snippet spt
 static propTypes = {
   ${1}: PropTypes.${2:type},
