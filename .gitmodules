@@ -55,3 +55,6 @@
 [submodule "vim/bundle/typescript-vim.git"]
 	path = vim/bundle/typescript-vim.git
 	url = https://github.com/leafgarland/typescript-vim.git
+[submodule "vim/bundle/vim-closetag.git"]
+	path = vim/bundle/vim-closetag.git
+	url = https://github.com/alvan/vim-closetag.git

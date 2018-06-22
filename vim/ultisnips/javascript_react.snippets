@@ -91,6 +91,23 @@ class ${1:ClassName} extends React.Component {
 }
 endsnippet
 
+snippet rfc "React Functional Component" b
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:`!v expand('%:t:r')`} = (${2:{...props}})  => (
+  <Fragment>
+    $3
+  </Fragment>
+)
+
+$1.defaultProps = {}
+
+$1.propTypes = {}
+
+export default $1
+endsnippet
+
 
 snippet st
 state = {
@@ -104,7 +121,6 @@ this.setState((prevState, props) = > ({
   ${1}: ${2}
 })
 endsnippet
-
 #Default props
 
 snippet sdp
@@ -192,6 +208,6 @@ PropTypes.shape({
 })${1:,}
 endsnippet
 
-snippet ir "isRequired" w
+snippet r "isRequired" w
 isRequired,
 endsnippet

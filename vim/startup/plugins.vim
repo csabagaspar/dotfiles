@@ -45,7 +45,12 @@ highlight Pmenu ctermbg=238 gui=bold
 let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
 let g:SuperTabContextDefaultCompletionType = "context"
 
+"delimitMate
 runtime macros/matchit.vim
+let delimitMate_autoclose = 1
+au FileType js,ts,jsx,html,css,scss let b:delimitMate_autoclose = 1
+let delimitMate_matchpairs = "(:),[:],{:}"
+au FileType js,ts,jsx,html,css,scss let b:delimitMate_matchpairs = "(:),[:],{:}"
 "let delimitMate_expand_cr = 1
 
 " vertical line indentation
@@ -61,3 +66,9 @@ let g:notes_suffix = '.txt'
 let g:UltiSnipsSnippetsDir="~/dotfiles/vim/ultisnips"
 let g:UltiSnipsSnippetDirectories=["ultisnips"]
 let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+"closetag
+let g:closetag_filenames = "*.html,*.jsx"
+
