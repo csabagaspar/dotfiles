@@ -70,5 +70,5 @@ let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "closetag
-let g:closetag_filenames = "*.html,*.jsx"
+let g:closetag_filenames = "*.html,*.jsx,*.js"
 
