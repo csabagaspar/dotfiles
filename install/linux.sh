@@ -27,10 +27,10 @@ else
     fi
   done
 
-  sudo curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add -
-  echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list
+  sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  sudo nvm install 10.12.0 64
   sudo apt-get install --no-install-recommends yarn
 
-  curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh" | bash
-  curl -s "https://get.sdkman.io" | bash
+  #curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh" | bash
+  #curl -s "https://get.sdkman.io" | bash
 fi
