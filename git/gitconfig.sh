@@ -5,6 +5,7 @@ git config --global push.default "upstream"
 git config --global core.excludesfile "$HOME/.gitignore_global"
 git config --global http.postBuffer "157286400"
 
+git config --global alias.listaliases "config --get-regexp alias"
 git config --global alias.a "add"
 git config --global alias.aa "add ."
 git config --global alias.b "branch"
@@ -18,6 +19,10 @@ git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(ye
 git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
 git config --global alias.wsdiff "diff --ignore-space-at-eol -w -b --no-ext-diff"
 git config --global alias.sdiff "diff --staged"
+git config --global alias.unlist "ls-files -v"
+git config --global alias.un "update-index --assume-unchanged --"
+git config --global alias.nun "update-index --no-assume-unchanged --"
+
 git config --global core.autocrlf "input"
 
 git config --global core.editor "vim"

@@ -31,6 +31,4 @@ else
   sudo nvm install 10.12.0 64
   sudo apt-get install --no-install-recommends yarn
 
-  #curl -o- "https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh" | bash
-  #curl -s "https://get.sdkman.io" | bash
 fi

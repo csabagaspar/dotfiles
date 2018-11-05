@@ -1,2 +1,2 @@
 #!/bin/bash
-tmux att || tmux new -s dev -n dotfiles\; send-keys 'cd ~/dotfiles' C-m \; neww -n katas \; send-keys 'cd ~/workspace/github/tutorials' C-m \; split-window -h -p 30 \; send-keys 'cd ~/workspace/github/katas/javascript' C-m \; neww -n tutorials \; send-keys 'cd ~/workspace/github/tutorials' C-m \; split-window -h -p 30 \; send-keys 'cd ~/workspace/github/tutorials' C-m \; neww -n apps \; send-keys 'cd ~/workspace/github/apps' C-m \; split-window -h -p 30 \; send-keys 'cd ~/workspace/github/apps' C-m \; neww -n shell\; neww -n shell\; neww -n shell\; neww -n shell\;
+tmux att || tmux new -s dev -n shell\; neww -n shell \; neww -n shell \; neww -n shell\; neww -n shell\; neww -n shell\; neww -n shell\; neww -n dotfiles\; send-keys 'cd ~/dotfiles' C-m \;
