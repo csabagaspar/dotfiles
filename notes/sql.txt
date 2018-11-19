@@ -1,5 +1,0 @@
-sql
-
-# Selection
-   • SELECT    *      FROM <table> ORDER BY <column>
-   •       count(*)

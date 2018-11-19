@@ -31,7 +31,7 @@ endsnippet
 snippet ren
 render() {
   return (
-      ${1:<div />}
+      ${1:<div></div>}
   )
 }
 endsnippet
@@ -82,13 +82,16 @@ endsnippet
 
 #react members
 snippet rcc
-class ${1:ClassName} extends React.Component {
+import React, { Component } from 'react'
+class ${1:ClassName} extends Component {
   render() {
     return (
-        ${0:<div />}
+        ${0:<div></div>}
         )
   }
 }
+
+export default $1
 endsnippet
 
 snippet rfc "React Functional Component" b
