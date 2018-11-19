@@ -59,7 +59,7 @@ let g:indentLine_color_gui = '#09AA08'
 let g:indentLine_char = '¦'
 
 "vim-notes
-let g:notes_directories = ['~/dotfiles/notes']
+let g:notes_directories = ['~/notes']
 let g:notes_suffix = '.txt'
 
 "ultisnip
