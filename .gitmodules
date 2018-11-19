@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-closetag.git"]
 	path = vim/bundle/vim-closetag.git
 	url = https://github.com/alvan/vim-closetag.git
+[submodule "notes"]
+	path = notes
+	url = git@bitbucket.org:csabagaspar/notes.git
