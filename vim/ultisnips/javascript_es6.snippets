@@ -14,10 +14,6 @@ snippet imas
 import * as ${1} from '${2:$1}'
 endsnippet
 
-snippet imm
-import { ${1} } from '${2}'
-endsnippet
-
 snippet cla
 class ${1} {
   ${0:${VISUAL}}
@@ -44,26 +40,9 @@ for (const ${1:prop} of ${2:object}) {
 }
 endsnippet
 
-snippet fun*
-function* ${1:function_name}(${2}) {
-  ${0:${VISUAL}}
-}
-endsnippet
-
-snippet c=>
-const ${1:function_name} = (${2}) => {
-  ${0:${VISUAL}}
-}
-endsnippet
 
 snippet caf
 const ${1:function_name} = (${2}) => {
-  ${0:${VISUAL}}
-}
-endsnippet
-
-snippet =>
-(${1}) => {
   ${0:${VISUAL}}
 }
 endsnippet
@@ -74,14 +53,12 @@ snippet af
 }
 endsnippet
 
-snippet sym
-const ${1} = Symbol('${0}');
+snippet saf
+${1} => (${2})
+
 endsnippet
 
 snippet ed
 export default ${0}
 endsnippet
 
-snippet ${
-  ${${1}}${0}}
-endsnippet

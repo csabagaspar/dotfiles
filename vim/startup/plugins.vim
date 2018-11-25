@@ -65,9 +65,9 @@ let g:notes_suffix = '.txt'
 "ultisnip
 let g:UltiSnipsSnippetsDir="~/dotfiles/vim/ultisnips"
 let g:UltiSnipsSnippetDirectories=["ultisnips"]
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+let g:UltiSnipsExpandTrigger="<c-l>"
+let g:UltiSnipsJumpForwardTrigger="<c-n>"
+let g:UltiSnipsJumpBackwardTrigger="<c-p>"
 
 "closetag
 let g:closetag_filenames = "*.html,*.jsx,*.js"
