@@ -71,4 +71,10 @@ let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 
 "closetag
 let g:closetag_filenames = "*.html,*.jsx,*.js"
-
+"MatchTagAlways
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'xml' : 1,
+    \ 'javascript.jsx' : 1,
+    \ 'javascript' : 1,
+    \}
