@@ -1,10 +1,15 @@
-
-set -s escape-time 0
+# increase vim responsivenessjh
+set -sg escape-time 0
 
 #THEME
 ## make tmux display things in 256 colors
-set -g default-terminal "screen-256color"
-#### COLOUR (Solarized 256)
+set -g default-terminal "xterm-256color"
+set -ga terminal-overrides ",xterm-256color:Tc"
+# fix scrolling
+set -g mouse on
+bind -n WheelUpPane if-shell -F -t = "#{mouse_any_flag}" "send-keys -M" "if -Ft= '#{pane_in_mode}' 'send-keys -M' 'select-pane -t=; copy-mode -e; send-keys -M'"
+bind -n WheelDownPane select-pane -t= \; send-keys -M
+k
 # default statusbar colors
 set-option -g status-bg colour235 #base02
 set-option -g status-fg colour136 #yellow
@@ -34,6 +39,12 @@ set-option -g display-panes-colour colour166 #orange
 
 # clock
 set-window-option -g clock-mode-colour colour64 #green
+
+# smooth copy and pasting
+# tmux < v2.1:
+if-shell "[[ `tmux -V | cut -d' ' -f2` -lt 2.1 ]]" "setw -g mode-mouse off"
+# tmux >= v2.1:
+if-shell "[[ `tmux -V | cut -d' ' -f2` -ge 2.1 ]]" "setw -g mouse off"
 
 # bell
 #set-window-option -g window-status-bell-style fg=colour235 #base02

@@ -78,3 +78,9 @@ let g:mta_filetypes = {
     \ 'javascript.jsx' : 1,
     \ 'javascript' : 1,
     \}
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 0
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'

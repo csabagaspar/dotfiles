@@ -95,6 +95,18 @@ export default $1
 endsnippet
 
 snippet rfc "React Functional Component" b
+import React from 'react'
+
+export default function ${1:`!v expand('%:t:r')`}(${2:props}) {
+  return (
+    <>
+     $3
+    </>
+  )
+}
+endsnippet
+
+snippet rac "React Arrow Component"
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 
@@ -110,7 +122,6 @@ $1.propTypes = {}
 
 export default $1
 endsnippet
-
 
 snippet st
 state = {
