@@ -55,3 +55,6 @@
 [submodule "vim/bundle/MatchTagAlways.git"]
 	path = vim/bundle/MatchTagAlways.git
 	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "vim/bundle/vim-graphql.git"]
+	path = vim/bundle/vim-graphql.git
+	url = https://github.com/jparise/vim-graphql.git
