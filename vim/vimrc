@@ -102,3 +102,4 @@ if has("autocmd")
     \ endif
   au VimLeave * silent execute '!echo -ne "\e[ q"' | redraw!
 endif
+command! WipeReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
