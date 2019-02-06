@@ -25,7 +25,7 @@ git config --global alias.nun "update-index --no-assume-unchanged --"
 
 git config --global core.autocrlf "input"
 
-git config --global core.editor "vim -w -s"
+git config --global core.editor "vim -w"
 git config --global color.ui "true"
 git config --global merge.tool "vimdiff"
 git config --global merge.conflictstyle "diff3"
