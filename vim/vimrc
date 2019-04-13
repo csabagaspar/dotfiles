@@ -30,6 +30,7 @@ set noerrorbells
 set visualbell
 set t_vb=
 set tm=500
+set backupcopy=yes
 
 set shortmess=a
 set laststatus=2
