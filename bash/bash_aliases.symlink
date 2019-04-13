@@ -1,7 +1,3 @@
-alias gitignore='cp ~/dotfiles/git/.gitignore .'
-alias gitattributes='cp ~/dotfiles/git/.gitattributes .'
-alias editorconfig='cp ~/dotfiles/.editorconfig .'
-alias tern-project='cp ~/dotfiles/configs/tern-project ./.tern-project'
 alias t='~/dotfiles/bash/t.sh'
 alias c='clear'
 alias knode='TASKKILL.exe /F /IM node.exe'
