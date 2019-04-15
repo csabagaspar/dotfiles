@@ -1,0 +1,9 @@
+snippet arrayToObject "[{key1: {..} }, {key2: {..} }] => { key1: {..} ,key2: {..} }"
+const arrayToObject = array => array.reduce(
+    (resultObject, object) => {
+      resultObject[Object.keys(object)[0]] = object[Object.keys(object)[0]]
+      return resultObject
+    },
+   {}
+)
+endsnippet
