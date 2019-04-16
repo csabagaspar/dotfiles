@@ -5,6 +5,12 @@ inoremap jj <Esc>
 
 map <Leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 
+"find in files
+map <F4> :execute "vimgrep /" . expand("<cword>") . "/j **" <Bar> cw<CR>
+
+"clear all register
+command! ClearReg for i in range(34,122) | silent! call setreg(nr2char(i), []) | endfor
+
 no <Up> <NOP>
 no <Down> <NOP>
 no <Left> <NOP>
