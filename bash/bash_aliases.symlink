@@ -1,5 +1,7 @@
 alias t='~/dotfiles/bash/t.sh'
 alias c='clear'
+alias r='ranger'
+alias w='w3m'
 alias knode='TASKKILL.exe /F /IM node.exe'
 alias offacc='sudo modprobe -r hp_accel'
 alias hygen='HYGEN_TMPLS=~/workspaces/hygen-templates/_templates hygen'

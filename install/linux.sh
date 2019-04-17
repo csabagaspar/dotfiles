@@ -15,6 +15,8 @@ else
   unzip
   tmux
   vim
+  w3m
+  ranger
   wget
   curl
   )
