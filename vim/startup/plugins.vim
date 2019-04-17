@@ -63,8 +63,8 @@ let g:indentLine_char = '¦'
 let g:UltiSnipsSnippetsDir="~/dotfiles/vim/ultisnips"
 let g:UltiSnipsSnippetDirectories=["ultisnips"]
 let g:UltiSnipsExpandTrigger="<c-l>"
-let g:UltiSnipsJumpForwardTrigger="<c-n>"
-let g:UltiSnipsJumpBackwardTrigger="<c-p>"
+let g:UltiSnipsJumpForwardTrigger="<c-k>"
+let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 "closetag
 let g:closetag_filenames = "*.html,*.jsx,*.js"
@@ -78,6 +78,9 @@ let g:mta_filetypes = {
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_tabs = 1
+let g:airline#extensions#tabline#show_tab_count = 1
+
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
