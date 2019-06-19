@@ -7,6 +7,21 @@ const arrayToObject = array => array.reduce(
    {}
 )
 endsnippet
-snippet oKey "optional key"
+snippet objectWrappingToArray "{ key1: {..} ,key2: {..} } => [{key1: {..} }, {key2: {..} }] "
+endsnippet
+snippet objectToArray "{ key1: {..} ,key2: {..} } => [{..},{..}] "
+const objectToArray = object => Object.keys(object).map(key => object[key])
+endsnippet
+
+snippet oIf "add an optional key to object"
 ...${1:key_to_check} && {${2:new_key}: $1},
+endsnippet
+
+snippet oRk "remove a key from object if have key"
+const {${1:name_of_the_key_to_remove}, ...rest} = ${2:object}
+
+endsnippet
+
+snippet oR "remove a key from object if not have key"
+const {[${1:name_of_the_key_to_remove}]: omit, ...rest} = ${2:object}
 endsnippet
