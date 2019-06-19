@@ -88,3 +88,6 @@ let g:airline#extensions#tabline#show_tab_count = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+"match highli
+hi MatchParen ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
