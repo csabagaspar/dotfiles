@@ -67,7 +67,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 "closetag
-let g:closetag_filenames = "*.html,*.jsx,*.js"
+"let g:closetag_filenames = "*.html,*.jsx,*.js"
+
 "MatchTagAlways
 let g:mta_filetypes = {
     \ 'html' : 1,
@@ -75,6 +76,9 @@ let g:mta_filetypes = {
     \ 'javascript.jsx' : 1,
     \ 'javascript' : 1,
     \}
+let g:mta_use_matchparen_group = 0
+let g:mta_set_default_matchtag_color = 0
+highlight MatchTag ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

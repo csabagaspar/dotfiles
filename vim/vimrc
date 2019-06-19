@@ -17,7 +17,15 @@ set ignorecase              " ignore case when searching
 set hlsearch                " Highlight search results
 set smartcase               " When searching try to be smart about cases
 set incsearch
+
 set showmatch               " Show matching brackets when text indicator is over them
+set matchtime=3
+"nem mukodik
+hi MatchParen ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+
+inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 
 set wildmode=list:longest,full
 
