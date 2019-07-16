@@ -91,3 +91,7 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 
 "match highli
 "hi MatchParen ctermfg=black ctermbg=lightgreen guifg=black guibg=lightgreen
+"
+"emmet
+let g:user_emmet_leader_key=','
+
