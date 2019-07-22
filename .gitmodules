@@ -58,3 +58,6 @@
 [submodule "vim/bundle/vim-graphql.git"]
 	path = vim/bundle/vim-graphql.git
 	url = https://github.com/jparise/vim-graphql.git
+[submodule "vim/bundle/vim-tmux-navigator.git"]
+	path = vim/bundle/vim-tmux-navigator.git
+	url = https://github.com/christoomey/vim-tmux-navigator.git

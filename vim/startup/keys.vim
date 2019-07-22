@@ -26,6 +26,7 @@ vno <Down> <NOP>
 vno <Left> <NOP>
 vno <Right> <NOP>
 
+
 " Mappings for moving lines and preserving indentation
 " http://vim.wikia.com/wiki/Moving_lines_up_or_down
 nnoremap <C-j> :m .+1<CR>==

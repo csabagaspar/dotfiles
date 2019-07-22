@@ -94,4 +94,12 @@ let g:airline#extensions#tabline#fnamemod = ':t'
 "
 "emmet
 let g:user_emmet_leader_key=','
+let g:user_emmet_install_global = 0
+autocmd FileType html,css,jsx,tsx EmmetInstall
+
+"split navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
 
