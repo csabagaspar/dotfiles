@@ -38,7 +38,8 @@ set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+,eol:¬
 set noerrorbells
 set visualbell
 set t_vb=
-set tm=500
+"set tm=500
+set timeoutlen=1000 ttimeoutlen=0
 set backupcopy=yes
 
 set shortmess=a

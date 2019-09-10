@@ -11,6 +11,9 @@ source ~/dotfiles/git/git-prompt.sh
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=true
 
+CHROME_BIN=/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
+export CHROME_BIN
+
 if [ -f ~/.bash_aliases ] ; then
   source  ~/.bash_aliases
 fi
