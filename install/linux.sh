@@ -19,6 +19,7 @@ else
   ranger
   wget
   curl
+  ctags
   )
 
   for formula in "${formulas[@]}"; do

@@ -48,9 +48,9 @@ let g:SuperTabContextDefaultCompletionType = "context"
 "delimitMate
 runtime macros/matchit.vim
 let delimitMate_autoclose = 1
-au FileType js,ts,jsx,html,css,scss let b:delimitMate_autoclose = 1
+au FileType js,ts,jsx,tsx,html,css,scss let b:delimitMate_autoclose = 1
 let delimitMate_matchpairs = "(:),[:],{:}"
-au FileType js,ts,jsx,html,css,scss let b:delimitMate_matchpairs = "(:),[:],{:}"
+au FileType js,ts,jsx,tsx,html,css,scss let b:delimitMate_matchpairs = "(:),[:],{:}"
 "let delimitMate_expand_cr = 1
 
 " vertical line indentation
@@ -74,6 +74,7 @@ let g:mta_filetypes = {
     \ 'html' : 1,
     \ 'xml' : 1,
     \ 'javascript.jsx' : 1,
+    \ 'javascript.tsx' : 1,
     \ 'javascript' : 1,
     \}
 let g:mta_use_matchparen_group = 0
