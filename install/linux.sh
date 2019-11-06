@@ -20,6 +20,7 @@ else
   wget
   curl
   ctags
+  fzf
   )
 
   for formula in "${formulas[@]}"; do

@@ -29,17 +29,6 @@ let g:EditorConfig_max_line_indicator = "line"
 "jsx
 let g:jsx_ext_required = 0
 
-"ternjs
-let g:tern_map_keys=1
-let g:tern_show_argument_hints='on_hold'
-let g:tern_show_signature_in_pum = 1
-autocmd FileType javascript setlocal omnifunc=tern#Complete
-
-"supertab
-highlight Pmenu ctermbg=238 gui=bold
-let g:SuperTabDefaultCompletionType = "<C-X><C-O>"
-let g:SuperTabContextDefaultCompletionType = "context"
-
 "delimitMate
 runtime macros/matchit.vim
 let delimitMate_autoclose = 1

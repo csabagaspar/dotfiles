@@ -13,12 +13,6 @@
 [submodule "vim/bundle/vim-airline-themes.git"]
 	path = vim/bundle/vim-airline-themes.git
 	url = https://github.com/vim-airline/vim-airline-themes.git
-[submodule "vim/bundle/tern_for_vim.git"]
-	path = vim/bundle/tern_for_vim.git
-	url = https://github.com/ternjs/tern_for_vim.git
-[submodule "vim/bundle/supertab.git"]
-	path = vim/bundle/supertab.git
-	url = https://github.com/ervandew/supertab.git
 [submodule "vim/bundle/indentLine.git"]
 	path = vim/bundle/indentLine.git
 	url = https://github.com/Yggdroot/indentLine.git
@@ -52,9 +46,6 @@
 [submodule "vim/bundle/MatchTagAlways.git"]
 	path = vim/bundle/MatchTagAlways.git
 	url = https://github.com/Valloric/MatchTagAlways.git
-[submodule "vim/bundle/vim-graphql.git"]
-	path = vim/bundle/vim-graphql.git
-	url = https://github.com/jparise/vim-graphql.git
 [submodule "vim/bundle/vim-tmux-navigator.git"]
 	path = vim/bundle/vim-tmux-navigator.git
 	url = https://github.com/christoomey/vim-tmux-navigator.git
