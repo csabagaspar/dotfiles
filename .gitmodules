@@ -7,9 +7,6 @@
 [submodule "vim/bundle/editorconfig-vim.git"]
 	path = vim/bundle/editorconfig-vim.git
 	url = https://github.com/editorconfig/editorconfig-vim.git
-[submodule "vim/bundle/ctrlp.vim.git"]
-	path = vim/bundle/ctrlp.vim.git
-	url = https://github.com/ctrlpvim/ctrlp.vim.git
 [submodule "vim/bundle/vim-airline.git"]
 	path = vim/bundle/vim-airline.git
 	url = https://github.com/vim-airline/vim-airline.git
