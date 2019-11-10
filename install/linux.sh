@@ -36,3 +36,4 @@ else
   sudo apt-get install --no-install-recommends yarn
 
 fi
+#fzf manual install

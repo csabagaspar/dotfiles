@@ -24,6 +24,8 @@ set matchtime=3
 set splitbelow
 set splitright
 
+set rtp+=~/.fzf
+
 inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a

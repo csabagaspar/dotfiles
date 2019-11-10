@@ -1,10 +1,16 @@
 #!/usr/bin/env bash
 
-echo "Installing dotfiles."
+echo "Installing dotfiles with bash"
 
 echo "=============================="
 echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
+if [ "$(uname)" == "MINGW64_NT*" ]; then
+    echo -e "\n\nRunning on GitBash"
+
+    source install/scoop.sh
+
+fi
 if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
     echo -e "\n\nRunning on Cygwin"
 
@@ -12,11 +18,11 @@ if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
     source install/cygwin.sh
 
 fi
+
 if [ "$(uname)" == "Linux" ]; then
     echo -e "\n\nRunning on Linux"
 
     source install/linux.sh
-fi
 
 echo "=============================="
 echo -e "\n\nSet env"

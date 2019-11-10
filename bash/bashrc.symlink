@@ -1,6 +1,6 @@
-
 VISUAL=vim
-EDITOR="$VISUAL"
+EDITOR=vim
+
 TERM=xterm-256color
 
 HISTCONTROL=ignoreboth
@@ -8,15 +8,18 @@ HISTIGNORE='cd:ls:bg:fg:history:vim'
 
 source ~/dotfiles/git/git-completion.bash
 source ~/dotfiles/git/git-prompt.sh
+
 PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 export GIT_PS1_SHOWCOLORHINTS=true
 
 CHROME_BIN=/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe
 export CHROME_BIN
+export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
 
 if [ -f ~/.bash_aliases ] ; then
   source  ~/.bash_aliases
 fi
+
 if [ "$(uname)" == "Linux" ]; then
   if [ -f ~/dotfiles/bash/linux.env ] ; then
      source  ~/dotfiles/bash/linux.env
