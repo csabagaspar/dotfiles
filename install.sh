@@ -22,13 +22,11 @@ echo "=============================="
 git submodule update --init --recursive
 
 
-
-
 echo "=============================="
 echo -e "\nCreating symlinks"
 echo "=============================="
-APPS=$HOME/dotfiles/apps
-linkables=$( find -H "$APPS" -maxdepth 3 -name '*.symlink' )
+DOTFILES=$HOME/dotfiles
+linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 for file in $linkables ; do
     target="$HOME/.$( basename $file '.symlink' )"
     if [ -e $target ]; then
