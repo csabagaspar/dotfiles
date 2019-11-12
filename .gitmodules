@@ -4,3 +4,42 @@
 [submodule "submodules/nerdtree.git"]
 	path = submodules/nerdtree.git
 	url = https://github.com/scrooloose/nerdtree.git
+[submodule "submodules/dracula.git"]
+	path = submodules/dracula.git
+	url = https://github.com/dracula/vim.git
+[submodule "submodules/vim-airline.git"]
+	path = submodules/vim-airline.git
+	url = https://github.com/vim-airline/vim-airline.git
+[submodule "submodules/vim-airline-themes.git"]
+	path = submodules/vim-airline-themes.git
+	url = https://github.com/vim-airline/vim-airline-themes.git
+[submodule "submodules/editorconfig-vim.git"]
+	path = submodules/editorconfig-vim.git
+	url = https://github.com/editorconfig/editorconfig-vim.git
+[submodule "submodules/ultisnips.git"]
+	path = submodules/ultisnips.git
+	url = https://github.com/SirVer/ultisnips.git
+[submodule "submodules/emmet-vim.git"]
+	path = submodules/emmet-vim.git
+	url = https://github.com/mattn/emmet-vim.git
+[submodule "submodules/vim-closetag.git"]
+	path = submodules/vim-closetag.git
+	url = https://github.com/alvan/vim-closetag.git
+[submodule "submodules/MatchTagAlways.git"]
+	path = submodules/MatchTagAlways.git
+	url = https://github.com/Valloric/MatchTagAlways.git
+[submodule "submodules/indentLine.git"]
+	path = submodules/indentLine.git
+	url = https://github.com/Yggdroot/indentLine.git
+[submodule "submodules/delimitMate.git"]
+	path = submodules/delimitMate.git
+	url = https://github.com/Raimondi/delimitMate.git
+[submodule "submodules/vim-tmux-navigator.git"]
+	path = submodules/vim-tmux-navigator.git
+	url = https://github.com/christoomey/vim-tmux-navigator.git
+[submodule "submodules/vim-polyglot.git"]
+	path = submodules/vim-polyglot.git
+	url = https://github.com/sheerun/vim-polyglot.git
+[submodule "submodules/typescript-ctags.git"]
+	path = submodules/typescript-ctags.git
+	url = https://github.com/jb55/typescript-ctags.git

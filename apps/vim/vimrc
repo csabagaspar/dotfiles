@@ -89,9 +89,9 @@ set conceallevel=1
 
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/node_modules/*,*/coverage/*,*/target/*     " Linux/MacOSX
-source ~/dotfiles/vim/startup/keys.vim
-source ~/dotfiles/vim/startup/plugins.vim
-source ~/dotfiles/vim/startup/abbr.vim
+source ~/dotfiles/apps/vim/startup/keys.vim
+source ~/dotfiles/apps/vim/startup/plugins.vim
+source ~/dotfiles/apps/vim/startup/abbr.vim
 
 
 set dictionary+=./.dictionary
