@@ -5,35 +5,24 @@ echo "Installing dotfiles with bash"
 echo "=============================="
 echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
-if [ "$(uname)" == "MINGW64_NT*" ]; then
-    echo -e "\n\nRunning on GitBash"
+if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
+    echo -e "\n\nRunning on Msys2"
 
-    source install/scoop.sh
-
-fi
-if [ "$(uname)" == "CYGWIN_NT-6.1" ]; then
-    echo -e "\n\nRunning on Cygwin"
-
-    source install/choco.sh
-    source install/cygwin.sh
+    source install/msys2.sh
 
 fi
 
 if [ "$(uname)" == "Linux" ]; then
-    echo -e "\n\nRunning on Linux"
+    echo -e "\n\nRunning on Ubuntu"
 
-    source install/linux.sh
+    source install/ubuntu.sh
+fi
 
-echo "=============================="
-echo -e "\n\nSet env"
-echo "=============================="
-MAVEN_OPTS=-Xms256m
-M2_REPO=${HOME}/.m2
 
 echo "=============================="
 echo "Running git setup..."
 echo "=============================="
-sh ~/dotfiles/git/gitconfig.sh
+sh ~/dotfiles/apps/git/gitconfig.sh
 
 echo "=============================="
 echo "Initializing git submodule(s)"
@@ -41,11 +30,12 @@ echo "=============================="
 git submodule update --init --recursive
 
 DOTFILES=$HOME/dotfiles
+APPS=$HOME/dotfiles/apps
 
 echo "=============================="
 echo -e "\nCreating symlinks"
 echo "=============================="
-linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
+linkables=$( find -H "$APPS" -maxdepth 3 -name '*.symlink' )
 for file in $linkables ; do
     target="$HOME/.$( basename $file '.symlink' )"
     if [ -e $target ]; then
@@ -59,8 +49,10 @@ done
 echo "=============================="
 echo -e "\n\nCreating vim symlinks"
 echo "=============================="
-VIMFILES=( "$HOME/.vim:$DOTFILES/vim"
-        "$HOME/.vimrc:$DOTFILES/vim/vimrc" )
+VIMFILES=( "$HOME/.vim:$APPS/vim"
+        "$HOME/.vimrc:$APPS/vim/vimrc"
+        "$HOME/.vim/autoload/pathogen.vim:$DOTFILES/submodules/vim-pathogen.git/autoload/pathogen.vim"
+      )
 
 for file in "${VIMFILES[@]}"; do
     KEY=${file%%:*}
