@@ -8,7 +8,7 @@ echo "=============================="
 if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
     echo -e "\n\nRunning on Msys2"
 
-    source install/msys2.sh
+   # source install/msys2.sh
 
 fi
 
@@ -22,7 +22,7 @@ fi
 echo "=============================="
 echo "Running git setup..."
 echo "=============================="
-sh ~/dotfiles/apps/git/gitconfig.sh
+#sh ~/dotfiles/apps/git/gitconfig.sh
 
 echo "=============================="
 echo "Initializing git submodule(s)"
@@ -52,6 +52,7 @@ echo "=============================="
 VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vimrc:$APPS/vim/vimrc"
         "$HOME/.vim/autoload/pathogen.vim:$DOTFILES/submodules/vim-pathogen.git/autoload/pathogen.vim"
+        "$HOME/.vim/bundle/nerdtree.git:$DOTFILES/submodules/nerdtree.git"
       )
 
 for file in "${VIMFILES[@]}"; do
