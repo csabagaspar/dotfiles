@@ -1,13 +1,12 @@
 #!/usr/bin/env bash
 
-echo "Installing dotfiles with bash"
-
 echo "=============================="
 echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
 if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
     echo -e "\n\nRunning on Msys2"
-   # source installs/msys2.sh
+    #source installs/msys2.sh
+    #source installs/msys2.env
 fi
 
 if [ "$(uname)" == "Linux" ]; then
@@ -18,17 +17,17 @@ fi
 
 
 echo "=============================="
-echo "Initializing git submodule(s)"
+echo "Initializing  submodule(s)"
 echo "=============================="
 git submodule update --init --recursive
 
 
 
-APPS=$HOME/dotfiles/apps
 
 echo "=============================="
 echo -e "\nCreating symlinks"
 echo "=============================="
+APPS=$HOME/dotfiles/apps
 linkables=$( find -H "$APPS" -maxdepth 3 -name '*.symlink' )
 for file in $linkables ; do
     target="$HOME/.$( basename $file '.symlink' )"
@@ -43,7 +42,7 @@ done
 echo "=============================="
 echo "Running git setup..."
 echo "=============================="
-sh ~/dotfiles/apps/git/gitconfig.sh
+sh ~/dotfiles/apps/git/install.sh
 echo "=============================="
 echo "Running vim setup..."
 echo "=============================="
