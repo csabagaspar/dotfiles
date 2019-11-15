@@ -5,14 +5,12 @@ echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
 if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
     echo -e "\n\nRunning on Msys2"
-    #source installs/msys2.sh
-    #source installs/msys2.env
+    #source ./msys2.sh
 fi
 
 if [ "$(uname)" == "Linux" ]; then
     echo -e "\n\nRunning on Ubuntu"
-    source installs/ubuntu.sh
-    source installs/ubuntu.env
+    source ./ubuntu.sh
 fi
 
 
