@@ -20,6 +20,7 @@ VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vim/bundle/delimitMate:$DOTFILES/submodules/delimitMate.git"
         "$HOME/.vim/bundle/tmux-navigator:$DOTFILES/submodules/vim-tmux-navigator.git"
         "$HOME/.vim/bundle/tmux-polyglot:$DOTFILES/submodules/vim-polyglot.git"
+        "$HOME/.vim/bundle/vim-colorschemes:$DOTFILES/submodules/vim-colorschemes.git"
       )
 
 for file in "${VIMFILES[@]}"; do
