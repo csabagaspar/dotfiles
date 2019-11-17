@@ -8,8 +8,7 @@ else
   echo "=============================="
 
   formulas=(
-  git
-  python2
+  python
   vim
   tmux
   ctags

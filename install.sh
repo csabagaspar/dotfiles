@@ -43,5 +43,6 @@ echo "=============================="
 echo "Running vim setup..."
 echo "=============================="
 sh ~/dotfiles/apps/vim/install.sh
+sh ~/dotfiles/apps/ctags/install.sh
 
 echo "Done."
