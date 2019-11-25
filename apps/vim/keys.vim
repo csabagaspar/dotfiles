@@ -2,6 +2,8 @@ let mapleader = ","
 let g:mapleader = ","
 
 inoremap jj <Esc>
+map gb :bn<CR>
+
 
 map <Leader>l :exec &conceallevel ? "set conceallevel=0" : "set conceallevel=1"<CR>
 

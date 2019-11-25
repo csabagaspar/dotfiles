@@ -19,6 +19,8 @@ let NERDTreeDirArrows = 1
 let NERDTreeShowHidden=1
 let g:NERDTreeDirArrowExpandable="+"
 let g:NERDTreeDirArrowCollapsible="~"
+"autocmd BufWinEnter * NERDTreeFind
+
 
 map <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
@@ -27,7 +29,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 let g:EditorConfig_max_line_indicator = "line"
 
 "jsx
-let g:jsx_ext_required = 0
+"let g:jsx_ext_required = 0
 
 "delimitMate
 runtime macros/matchit.vim

@@ -46,3 +46,9 @@
 [submodule "submodules/vim-colorschemes.git"]
 	path = submodules/vim-colorschemes.git
 	url = https://github.com/flazz/vim-colorschemes.git
+[submodule "submodules/vim-notes.git"]
+	path = submodules/vim-notes.git
+	url = https://github.com/xolox/vim-notes.git
+[submodule "submodules/vim-misc.git"]
+	path = submodules/vim-misc.git
+	url = https://github.com/xolox/vim-misc.git

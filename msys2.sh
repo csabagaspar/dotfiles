@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+echo "Install node and npm"
+echo "Install golanguage"
+
 if test ! $(which pacman); then
   echo "Should install pacman"
 else
@@ -8,6 +11,8 @@ else
   echo "=============================="
 
   formulas=(
+  zip
+  unzip
   python
   vim
   tmux
@@ -22,3 +27,5 @@ else
     fi
   done
 fi
+
+
