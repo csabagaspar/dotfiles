@@ -52,6 +52,10 @@ let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
+"vim-notes
+let g:notes_directories = ['~/notes']
+let g:notes_suffix = '.txt'
+
 "closetag
 "let g:closetag_filenames = "*.html,*.jsx,*.js"
 
