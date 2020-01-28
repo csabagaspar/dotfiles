@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
@@ -22,8 +24,8 @@ VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vim/bundle/tmux-polyglot:$DOTFILES/submodules/vim-polyglot.git"
         "$HOME/.vim/bundle/vim-colorschemes:$DOTFILES/submodules/vim-colorschemes.git"
         "$HOME/.vim/bundle/vim-misc:$DOTFILES/submodules/vim-misc.git"
-        "$HOME/.vim/bundle/vim-notes:$DOTFILES/submodules/vim-notes.git"
-      )
+	"$HOME/.vim/bundle/vim-notes:$DOTFILES/submodules/vim-notes.git" )
+
 
 for file in "${VIMFILES[@]}"; do
     KEY=${file%%:*}
@@ -32,7 +34,6 @@ for file in "${VIMFILES[@]}"; do
         echo "${KEY} already exists... skipping."
     else
         echo "Creating symlink for $KEY"
-        ln -s ${VALUE} ${KEY}
+        /bin/bash ln -s ${VALUE} ${KEY}
     fi
 done
-

@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 

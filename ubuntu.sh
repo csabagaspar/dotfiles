@@ -7,7 +7,7 @@ else
   echo -e "\n\nInstalling apt-get packages..."
   echo "=============================="
 
-  sudo apt-get update
+  /bin/bash sudo apt-get update
 
 
   formulas=(
@@ -15,6 +15,7 @@ else
   unzip
   tmux
   vim
+  vim-gtk
   w3m
   ranger
   wget
@@ -27,13 +28,16 @@ else
     if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
       echo "$formula already installed... skipping."
     else
-      sudo apt-get install $formula
+      /bin/bash sudo apt-get install $formula
     fi
   done
 
-  sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
-  sudo nvm install 10.12.0 64
-  sudo apt-get install --no-install-recommends yarn
+  echo -e "\n\nInstalling non apt packages..."
+  echo "=============================="
+
+  /bin/bash sudo curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.11/install.sh | bash
+  /bin/bash sudo nvm install 10.12.0 64
+  /bin/bash sudo apt-get install --no-install-recommends yarn
+  #fzf manual install
 
 fi
-#fzf manual install

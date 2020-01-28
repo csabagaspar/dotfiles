@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 git config --global user.name "csabagaspar"
 git config --global user.email "gaspar.csaba@gmail.com"
 git config --global core.longpaths "true"
