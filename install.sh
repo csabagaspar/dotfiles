@@ -1,6 +1,11 @@
 #!/usr/bin/env bash
 
 echo "=============================="
+echo -e "\n\nPrerequisite"
+echo "=============================="
+echo -e "\n\ngit"
+
+echo "=============================="
 echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
 if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
@@ -15,7 +20,7 @@ fi
 
 
 echo "=============================="
-echo "Initializing  submodule(s)"
+echo "Initializing git submodule(s)"
 echo "=============================="
 /bin/bash git submodule update --init --recursive
 
@@ -43,6 +48,12 @@ echo "=============================="
 echo "Running vim setup..."
 echo "=============================="
 /bin/bash  ~/dotfiles/apps/vim/install.sh
+echo "=============================="
+echo "Running ctags typescript setup..."
+echo "=============================="
 /bin/bash  ~/dotfiles/apps/ctags/install.sh
+echo "=============================="
+echo "Running tmux setup..."
+echo "=============================="
 
 echo "Done."

@@ -22,6 +22,7 @@ else
   curl
   ctags
   fzf
+  dos2unix
   )
 
   for formula in "${formulas[@]}"; do
