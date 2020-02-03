@@ -1,7 +1,9 @@
 VISUAL=vim
 EDITOR=vim
 
-TERM=xterm-256color
+#TERM=xterm-256color
+TERM=xterm
+export TERM
 
 HISTCONTROL=ignoreboth
 HISTIGNORE='cd:ls:bg:fg:history:vim'
