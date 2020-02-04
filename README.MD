@@ -19,3 +19,8 @@ fe: git submodule add https://github.com/leafgarland/typescript-vim.git vim/bund
  Run rm -rf .git/modules/path_to_submodule (no trailing slash).
  Commit git commit -m "Removed submodule "
  Delete the now untracked submodule files rm -rf path_to_submodule
+
+
+ #ctags
+ ctags --exclude=node_modules --languages=typescript -R
+ #ctags in vim command: g]
