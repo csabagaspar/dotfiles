@@ -53,7 +53,7 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 "vim-notes
-let g:notes_directories = ['~/notes']
+let g:notes_directories = ['~/workspaces/notes']
 let g:notes_suffix = '.txt'
 
 "closetag
