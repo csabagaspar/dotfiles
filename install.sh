@@ -8,14 +8,10 @@ echo -e "\n\ngit"
 echo "=============================="
 echo -e "\n\nRunning platform specific installs.."
 echo "=============================="
-if [ "$(uname)" == "MSYS_NT-10.0-18362" ]; then
-    echo -e "\n\nRunning on Msys2"
-    #source ./msys2.sh
-fi
 
 if [ "$(uname)" == "Linux" ]; then
     echo -e "\n\nRunning on Ubuntu"
-    #source ./ubuntu.sh
+    source ./ubuntu.sh
 fi
 
 
@@ -40,20 +36,8 @@ for file in $linkables ; do
     fi
 done
 
-echo "=============================="
-echo "Running git setup..."
-echo "=============================="
 /bin/bash ~/dotfiles/apps/git/install.sh
-echo "=============================="
-echo "Running vim setup..."
-echo "=============================="
 /bin/bash  ~/dotfiles/apps/vim/install.sh
-echo "=============================="
-echo "Running ctags typescript setup..."
-echo "=============================="
 /bin/bash  ~/dotfiles/apps/ctags/install.sh
-echo "=============================="
-echo "Running tmux setup..."
-echo "=============================="
 
 echo "Done."

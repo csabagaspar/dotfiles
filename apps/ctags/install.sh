@@ -3,6 +3,10 @@
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
+echo "=============================="
+echo "Running ctags typescript setup..."
+echo "=============================="
+
 if [ -e $HOME/.ctags ]; then
   echo ".ctags already exists... skipping."
 else

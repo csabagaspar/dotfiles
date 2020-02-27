@@ -4,6 +4,9 @@ DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
 echo "=============================="
+echo "Running vim setup..."
+echo "=============================="
+echo "=============================="
 echo -e "\n\nCreating vim symlinks"
 echo "=============================="
 VIMFILES=( "$HOME/.vim:$APPS/vim"

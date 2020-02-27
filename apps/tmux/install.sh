@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
 echo "=============================="
-echo "Running git setup..."
+echo "Running tmux setup..."
 echo "=============================="
-/bin/bash ~/dotfiles/apps/git/gitconfig.sh
