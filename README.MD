@@ -1,26 +1,24 @@
-# Dotfiles
- * set proxy
-Set
- * git config --global core.autocrlf input
-before clonning.
-## Add submodule
+# Dofiles
+
+## Submodules
+### adding submodule
 fe: git submodule add https://github.com/leafgarland/typescript-vim.git vim/bundle/typescript-vim.git
-## Upgrading all bundled plugins
+### Upgrading all bundled plugins
  * git submodule foreach git pull origin master
 
 
 
- To remove a submodule you need to:
+### removing a submodule:
+ * Delete the relevant section from the .gitmodules file.
+ * Stage the .gitmodules changes git add .gitmodules
+ * Delete the relevant section from .git/config.
+ * Run git rm --cached path_to_submodule (no trailing slash).
+ * Run rm -rf .git/modules/path_to_submodule (no trailing slash).
+ * Commit git commit -m "Removed submodule "
+ * Delete the now untracked submodule files rm -rf path_to_submodule
 
- Delete the relevant section from the .gitmodules file.
- Stage the .gitmodules changes git add .gitmodules
- Delete the relevant section from .git/config.
- Run git rm --cached path_to_submodule (no trailing slash).
- Run rm -rf .git/modules/path_to_submodule (no trailing slash).
- Commit git commit -m "Removed submodule "
- Delete the now untracked submodule files rm -rf path_to_submodule
 
-
- #ctags
- ctags --exclude=node_modules --languages=typescript -R
- #ctags in vim command: g]
+ ## Ctags
+ ### running ctags
+	 ctags --exclude=node_modules --languages=typescript -R
+ ### ctags command  in vim command: g]
