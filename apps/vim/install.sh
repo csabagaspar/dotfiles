@@ -27,6 +27,7 @@ VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vim/bundle/tmux-polyglot:$DOTFILES/submodules/vim-polyglot.git"
         "$HOME/.vim/bundle/vim-colorschemes:$DOTFILES/submodules/vim-colorschemes.git"
         "$HOME/.vim/bundle/vim-misc:$DOTFILES/submodules/vim-misc.git"
+        "$HOME/.vim/bundle/tagbar:$DOTFILES/submodules/tagbar.git"
 	"$HOME/.vim/bundle/vim-notes:$DOTFILES/submodules/vim-notes.git" )
 
 

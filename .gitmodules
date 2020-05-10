@@ -52,3 +52,6 @@
 [submodule "submodules/vim-misc.git"]
 	path = submodules/vim-misc.git
 	url = https://github.com/xolox/vim-misc.git
+[submodule "submodules/tagbar.git"]
+	path = submodules/tagbar.git
+	url = https://github.com/majutsushi/tagbar.git
