@@ -1,1 +1,227 @@
-extends javascript
+snippet ir
+import React from 'react'
+endsnippet
+
+snippet ip
+import PropTypes from 'prop-types'
+endsnippet
+
+snippet irc
+import React, { Component } from 'react'
+endsnippet
+
+#Lifecycle
+#mount
+#1
+snippet ctor
+constructor(props) {
+  super(props)
+    ${1}
+}
+endsnippet
+
+#2
+snippet gdsfp
+static getDerivedStateFromProps(props, state){
+  ${1}
+}
+endsnippet
+
+#3
+snippet ren
+render() {
+  return (
+      ${1:<div></div>}
+  )
+}
+endsnippet
+
+#4
+snippet cdm
+componentDidMount() {
+  ${1}
+}
+endsnippet
+
+#update
+#2
+snippet scu
+shouldComponentUpdate(nextProps, nextState) {
+  ${1}
+}
+endsnippet
+
+#4
+snippet gsbu
+getSnapshotBeforeUpdate(prevProps, prevState) {
+  ${1}
+}
+endsnippet
+
+#5
+snippet cdu
+componentDidUpdate(prevProps, prevState, snapshot) {
+  ${1}
+}
+endsnippet
+
+#unmount
+snippet cwu
+componentWillUnmount() {
+  ${1}
+}
+endsnippet
+
+#errorhandling
+snippet cdc
+componentDidCatch(){
+  ${1}
+}
+endsnippet
+
+
+#react members
+snippet rcc
+import React, { Component } from 'react'
+class ${1:ClassName} extends Component {
+  render() {
+    return (
+        ${0:<div></div>}
+        )
+  }
+}
+
+export default $1
+endsnippet
+
+snippet rfc "React Functional Component" b
+import React from 'react'
+
+export default function ${1:`!v expand('%:t:r')`}(${2:props}) {
+  return (
+    <>
+     $3
+    </>
+  )
+}
+endsnippet
+
+snippet rac "React Arrow Component"
+import React, { Fragment } from 'react'
+import PropTypes from 'prop-types'
+
+const ${1:`!v expand('%:t:r')`} = ${2:props}  => (
+  <Fragment>
+    $3
+  </Fragment>
+)
+
+$1.defaultProps = {}
+
+$1.propTypes = {}
+
+export default $1
+endsnippet
+
+snippet st
+state = {
+  ${1}: ${2},
+}
+endsnippet
+
+
+snippet sst
+this.setState((prevState, props) = > ({
+  ${1}: ${2}
+})
+endsnippet
+#Default props
+
+snippet sdp
+static defaultProps = {
+  ${1}: ${2},
+}
+endsnippet
+
+snippet dp "Default Props" b
+    ${1:`!v expand('%:t:r')`.}defaultProps = {
+    $2
+    }
+endsnippet
+
+#PropTypes
+snippet spt
+static propTypes = {
+  ${1}: PropTypes.${2:type},
+}
+endsnippet
+
+snippet pt "PropTypes Definition" b
+${1:`!v expand('%:t:r')`.}propTypes = {
+  ${2:className}: ${3:PropTypes.string},
+};
+endsnippet
+
+snippet  pt.a "PropTypes Array" w
+PropTypes.array${1:,}
+endsnippet
+
+snippet   pt.b "PropTypes Boolean" w
+PropTypes.bool${1:,}
+endsnippet
+
+snippet pt.f "PropTypes Function" w
+PropTypes.func${1:,}
+endsnippet
+
+snippet pt.n "PropTypes Number" w
+PropTypes.number${1:,}
+endsnippet
+
+snippet pt.o "PropTypes Object" w
+PropTypes.object${1:,}
+endsnippet
+
+snippet pt.s "PropType String" w
+PropTypes.string${1:,}
+endsnippet
+
+snippet pt.no "PropTypes Node" w
+PropTypes.node${1:,}
+endsnippet
+
+snippet pt.e "PropTypes Element" w
+PropTypes.element${1:,}
+endsnippet
+
+snippet pt.io "PropTypes instanceOf" w
+PropTypes.instanceOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.one "PropTypes oneOf" w
+PropTypes.oneOf(['$2'$3])${1:,}
+endsnippet
+
+snippet pt.onet "PropTypes oneOfType" w
+PropTypes.oneOfType([
+  $2
+])${1:,}
+endsnippet
+
+snippet pt.ao "PropTypes arrayOf" w
+PropTypes.arrayOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.oo "PropTypes objectOf" w
+PropTypes.objectOf(${2:PropTypes.string})${1:,}
+endsnippet
+
+snippet pt.sh "PropTyes Shape" w
+PropTypes.shape({
+  $2
+})${1:,}
+endsnippet
+
+snippet r "isRequired" w
+isRequired,
+endsnippet

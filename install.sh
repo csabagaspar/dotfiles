@@ -11,14 +11,14 @@ echo "=============================="
 
 if [ "$(uname)" == "Linux" ]; then
     echo -e "\n\nRunning on Ubuntu"
-    source ./ubuntu.sh
+#    source ./ubuntu.sh
 fi
 
 
 echo "=============================="
 echo "Initializing git submodule(s)"
 echo "=============================="
-/bin/bash git submodule update --init --recursive
+git submodule update --init --recursive
 
 
 echo "=============================="
@@ -32,7 +32,7 @@ for file in $linkables ; do
         echo "~${target#$HOME} already exists... Skipping."
     else
         echo "Creating symlink for $file"
-        /bin/bash ln -s $file $target
+        ln -s $file $target
     fi
 done
 
