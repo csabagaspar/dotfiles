@@ -99,14 +99,18 @@ nnoremap <C-H> <C-W><C-H>
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
-    \ 'a:arrow-functions',
+    \ 'a:=>',
     \ 'C:Components',
+    \ 'T:Types',
+    \ 'X:Contexts',
   \ ]
 \ }
 let g:tagbar_type_typescriptreact = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
-    \ 'a:arrow-functions',
+    \ 'a:=>',
     \ 'C:Components',
+    \ 'T:Types',
+    \ 'X:Contexts',
   \ ]
 \ }
