@@ -55,3 +55,6 @@
 [submodule "submodules/typescriptreact-ctags.git"]
 	path = submodules/typescriptreact-ctags.git
 	url = https://github.com/csabagaspar/typescriptreact-ctags.git
+[submodule "submodules/fzf.vim.git"]
+	path = submodules/fzf.vim.git
+	url = https://github.com/junegunn/fzf.vim.git

@@ -114,3 +114,5 @@ let g:tagbar_type_typescriptreact = {
     \ 'X:Contexts',
   \ ]
 \ }
+"fzf
+let g:fzf_tags_command = 'ctags -R --languages=typescript --exclude=node_modules'
