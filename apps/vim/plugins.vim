@@ -100,8 +100,8 @@ let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
-    \ 'CC:ClassComponents',
-    \ 'FC:FunctionalComponents',
+    \ 'C:ClassComponents',
+    \ 'F:FunctionalComponents',
     \ 'T:Types',
     \ 'X:Contexts',
   \ ]
@@ -110,8 +110,8 @@ let g:tagbar_type_typescriptreact = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
-    \ 'CC:ClassComponents',
-    \ 'FC:FunctionalComponents',
+    \ 'C:ClassComponents',
+    \ 'F:FunctionalComponents',
     \ 'T:Types',
     \ 'X:Contexts',
   \ ]
