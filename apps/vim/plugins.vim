@@ -104,6 +104,8 @@ let g:tagbar_type_typescript = {
     \ 'F:FunctionalComponents',
     \ 'T:Types',
     \ 'X:Contexts',
+    \ 'I:Interfaces',
+    \ 'E:Enums',
   \ ]
 \ }
 let g:tagbar_type_typescriptreact = {
@@ -114,6 +116,8 @@ let g:tagbar_type_typescriptreact = {
     \ 'F:FunctionalComponents',
     \ 'T:Types',
     \ 'X:Contexts',
+    \ 'I:Interfaces',
+    \ 'E:Enums',
   \ ]
 \ }
 "fzf
