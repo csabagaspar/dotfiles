@@ -122,3 +122,7 @@ let g:tagbar_type_typescriptreact = {
 \ }
 "fzf
 let g:fzf_tags_command = 'ctags -R --languages=typescript --exclude=node_modules'
+map <C-t> :Files<CR>
+map <C-z> :Lines<CR>
+map <C-b> :Buffers<CR>
+map <C-r> :Tags<CR>
