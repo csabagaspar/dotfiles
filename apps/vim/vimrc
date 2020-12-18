@@ -20,9 +20,13 @@ set incsearch
 
 set showmatch               " Show matching brackets when text indicator is over them
 set matchtime=3
+set hidden
 
 set splitbelow
 set splitright
+set spell spelllang=en_us
+set complete+=kspell
+set completeopt=menuone,longest
 
 set rtp+=~/.fzf
 
