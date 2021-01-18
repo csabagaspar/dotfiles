@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-git config --global user.name "csabagaspar"
-git config --global user.email "gaspar.csaba@gmail.com"
+git config --global user.name "Csaba Gaspar"
+git config --global user.email "cgaspar@accretivetg.com"
 git config --global core.longpaths "true"
 git config --global push.default "upstream"
 git config --global core.excludesfile "$HOME/.gitignore_global"
