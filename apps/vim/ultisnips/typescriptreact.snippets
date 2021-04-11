@@ -214,6 +214,18 @@ const ${1:`!v expand('%:t:r')`}: FC<$2$1Props> = props => {
 export default $1;
 endsnippet
 
+snippet fc "function component export" b
+import React from "react";
+
+export interface $1Props {
+	$3
+}
+
+export const ${1:`!v expand('%:t:r')`} = (props: $2$1Props): JSX.Element => {
+	return ${4:null};$0
+};
+endsnippet
+
 snippet sfce "simple function component export (no prop interface)" b
 import React, { FC } from "react";
 
