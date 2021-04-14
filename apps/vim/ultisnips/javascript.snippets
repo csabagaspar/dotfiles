@@ -1,3 +1,14 @@
+global !p
+def upperfirst(t):
+	if len(t) < 2:
+		return '' if len(t) < 1 else t.capitalize()
+	return t[0].capitalize() + t[1:]
+def lowerdash(t):
+	return '-'.join([ w.lower() for w in re.findall('[a-z]+|[A-Z]+[a-z]*', t) ])
+endglobal
+
+
+# error handling
 snippet tc
 try {
   ${1}
@@ -19,6 +30,72 @@ finally {
 }
 endsnippet
 
-snippet cl
-console.log('${1}',${2})
+#  console
+snippet cl "console.log"
+console.log($1);
 endsnippet
+
+snippet clv "console.log variable"
+console.log("$1:", $1);
+endsnippet
+
+snippet ce "console.error"
+console.error($1);
+endsnippet
+
+snippet cw "console.warn"
+console.warn($1);
+endsnippet
+
+snippet ct "console.table"
+console.table($1);
+endsnippet
+
+# require
+snippet rc "require package that converts from camelCase or PascalCase to kebab-cased" b
+const $1 = require('$2`!p snip.rv=lowerdash(t[1])`');
+endsnippet
+
+# imports
+snippet imp "import package that converts from camelCase or PascalCase to kebab-cased" b
+import $1 from '$2`!p snip.rv=lowerdash(t[1])`';
+endsnippet
+
+snippet impf "import File from './File'" b
+import $1 from '${2:./}${3:$1}';
+endsnippet
+
+snippet impn "import { nested } from" b
+import { $1 } from '$2';
+endsnippet
+
+snippet impa "import all from a package that converts from camelCase or PascalCase to kebab-cased" b
+import * as $1 from "$2`!p snip.rv=lowerdash(t[1])`";
+endsnippet
+
+snippet impp "import file without a declaration" b
+import "$1";
+endsnippet
+
+
+# exports
+snippet exp "export { default } from './CurrentFolderName'"
+export { default } from "./${1:`!v expand('%:p:h:t')`}";
+endsnippet
+
+snippet expf "export File from './File'" b
+export $1 from "${2:./}$1";
+endsnippet
+
+snippet expn "export nested" b
+export { $1 } from "$2";
+endsnippet
+
+snippet expd "export { default as File } from './File'" b
+export { default as $1 } from "${2:./}$1";
+endsnippet
+
+snippet expa "export * from" b
+export * from "$1";
+endsnippet
+

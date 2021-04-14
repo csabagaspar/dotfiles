@@ -25,8 +25,17 @@ set hidden
 set splitbelow
 set splitright
 set spell spelllang=en_us
-set complete+=kspell
-set completeopt=menuone,longest
+
+"spelling
+"set complete+=kspell
+"set completeopt=menuone,longest
+
+"k=uses dictionary, i=uses current and included files, t=tag completion.
+set complete+=k
+set complete+=t
+set dictionary+=~/dotfiles/apps/vim/dictionaries/react.txt
+set dictionary+=~/dotfiles/apps/vim/dictionaries/dom.txt
+set dictionary+=./.dictionary
 
 set rtp+=~/.fzf
 
@@ -97,7 +106,6 @@ source ~/dotfiles/apps/vim/plugins.vim
 source ~/dotfiles/apps/vim/abbr.vim
 
 
-set dictionary+=./.dictionary
 
 "onmi func
 augroup omnifuncs

@@ -1,1 +1,25 @@
 extends javascript
+
+snippet debounce
+
+export function debounce<Params extends any[]>(
+  func: (...args: Params) => any,
+  timeout: number
+): (...args: Params) => void {
+  let timer: NodeJS.Timeout;
+  return (...args: Params) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func(...args);
+    }, timeout);
+  };
+}
+endsnippet
+
+
+# oop
+
+snippet intf "create interface for file" b
+export interface ${1:`!v expand('%:t:r')`}$2 {
+}
+endsnippet

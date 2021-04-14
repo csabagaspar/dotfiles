@@ -15,3 +15,53 @@ it('${1}', () => {
   ${2}
 })
 endsnippet
+
+# ==========================================
+# Test Snippets
+#
+snippet rtf "React Test File" b
+import React from "react";
+import { render } from "@testing-library/react";
+
+import ${1:`!v expand('%:t:r')`} from "../$1";
+
+describe("$1", () => {
+	it("should $2", () => {
+		$3
+	});
+});
+endsnippet
+
+snippet rhtf "React Hooks Test File" b
+import { renderHook } from "@testing-library/react-hooks";
+
+import $2 from "../${1:`!v expand('%:t:r')`}";
+
+describe("$1", () => {
+	it("should $3", () => {
+		$4
+	});
+});
+endsnippet
+
+snippet desc "describe a test" b
+describe("$1", () => {
+	it("should $2", () => {
+		$3
+	});
+});
+endsnippet
+
+snippet it "create a test block" b
+it("should $1", () => {
+	$2
+});
+endsnippet
+
+snippet todo "it.todo()" b
+it.todo("should $1");
+endsnippet
+
+snippet es "expect(container).toMatchSnapshot()" b
+expect(${1:container}).toMatchSnapshot();$0
+endsnippet
