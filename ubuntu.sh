@@ -7,7 +7,7 @@ else
   echo -e "\n\nInstalling apt-get packages..."
   echo "=============================="
 
-  /bin/bash sudo apt-get update
+  sudo apt-get update
 
 
   formulas=(
@@ -29,7 +29,7 @@ else
     if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
       echo "$formula already installed... skipping."
     else
-      /bin/bash sudo apt-get install $formula
+      sudo apt-get install $formula
     fi
   done
 
