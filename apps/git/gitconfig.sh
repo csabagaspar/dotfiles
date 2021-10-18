@@ -20,6 +20,8 @@ git config --global alias.st "status"
 git config --global alias.s "status --short --branch"
 git config --global alias.c "commit"
 git config --global alias.cm "commit -m"
+git config --global alias.r "restore"
+git config --global alias.rs "restore --staged"
 
 git config --global alias.lg "log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative"
 git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
