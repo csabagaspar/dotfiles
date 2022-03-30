@@ -23,3 +23,51 @@ snippet intf "create interface for file" b
 export interface ${1:`!v expand('%:t:r')`}$2 {
 }
 endsnippet
+
+snippet useIsMounted "useIsMounted implement"
+import { MutableRefObject, useEffect, useRef } from "react";
+
+/**
+ * Utility hook for checking if a component is currently mounted or not.
+ * This is useful for conditionals where data or function may return after dismount, so that we may abort waiting,
+ * or cancel the operation, in order to prevent memory leaks.
+ */
+const useIsMounted = (): MutableRefObject<boolean> => {
+  const isMounted = useRef(false);
+
+  useEffect(() => {
+    isMounted.current = true;
+    return () => {
+      isMounted.current = false;
+    };
+  }, []);
+
+  return isMounted;
+};
+
+export default useIsMounted;
+endsnippet
+
+snippet isInBrowser "is in browser"
+/**
+ * Utility function that checks if client running in browser or headless and returns a boolean.
+ */
+export const isInBrowser = (): boolean => typeof window !== "undefined";
+endsnippet
+
+snippet isInFrame "is inFrame"
+export default function isInFrame(): boolean {
+  return typeof window === "undefined" || window.self !== window.top;
+}
+endsnippet
+
+snippet isInFrame "is isInIFrame"
+/**
+ * Utility function that checks if in browser or headless and if we are the top parent of window, returning a boolean.
+ */
+export const isInIFrame = (): boolean => isInBrowser() && window !== window.top;
+
+endsnippet
+
+
+
