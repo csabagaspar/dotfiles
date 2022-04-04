@@ -28,6 +28,7 @@ git config --global alias.wslog "log --ignore-space-at-eol -p -w -b"
 
 git config --global alias.wsdiff "diff --ignore-space-at-eol -w -b --no-ext-diff"
 git config --global alias.sdiff "diff --staged"
+git config --global alias.cdiff "diff @~ @"
 git config --global alias.unlist "ls-files -v"
 git config --global alias.un "update-index --assume-unchanged --"
 git config --global alias.nun "update-index --no-assume-unchanged --"

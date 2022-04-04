@@ -54,8 +54,8 @@ let g:UltiSnipsJumpForwardTrigger="<c-k>"
 let g:UltiSnipsJumpBackwardTrigger="<c-j>"
 
 "vim-notes
-let g:notes_directories = ['~/workspaces/notes']
-let g:notes_suffix = '.txt'
+"let g:notes_directories = ['~/workspaces/notes']
+"let g:notes_suffix = '.txt'
 
 "closetag
 "let g:closetag_filenames = "*.html,*.jsx,*.js"
@@ -96,10 +96,12 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 "tagbar
+nmap <F8> :TagbarToggle<CR>
 let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
+    \ 'S:useState',
     \ 'C:CC',
     \ 'F:FC',
     \ 'T:Types',
@@ -112,6 +114,7 @@ let g:tagbar_type_typescriptreact = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
+    \ 'S:useState',
     \ 'C:CC',
     \ 'F:FC',
     \ 'T:Types',
