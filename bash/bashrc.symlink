@@ -4,8 +4,9 @@ export EDITOR="$VISUAL"
 TERM=xterm-256color
 export TERM
 
-HISTCONTROL=ignoreboth:erasedups
-HISTIGNORE='cd:ls:bg:fg:history:vim'
+HISTCONTROL="erasedups:ignoreboth"
+HISTIGNORE='cd:cd *:ls:ls *:bg:fg:history *:vim:vim *:git:git *:npm:npm *'
+HISTSIZE=1000
 
 
 source ~/dotfiles/apps/git/git-completion.bash

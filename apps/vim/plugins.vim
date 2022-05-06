@@ -101,7 +101,8 @@ let g:tagbar_type_typescript = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
-    \ 'S:useState',
+    \ 's:useState',
+    \ 'e:useEffect',
     \ 'C:CC',
     \ 'F:FC',
     \ 'T:Types',
@@ -114,7 +115,8 @@ let g:tagbar_type_typescriptreact = {
   \ 'ctagstype': 'typescript',
   \ 'kinds': [
     \ 'a:=>',
-    \ 'S:useState',
+    \ 's:useState',
+    \ 'e:useEffect',
     \ 'C:CC',
     \ 'F:FC',
     \ 'T:Types',
