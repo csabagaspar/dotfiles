@@ -5,7 +5,7 @@ TERM=xterm-256color
 export TERM
 
 HISTCONTROL="erasedups:ignoreboth"
-HISTIGNORE='cd:cd *:ls:ls *:bg:fg:history *:vim:vim *:git:git *:npm:npm *'
+HISTIGNORE='cd:cd *:ls:ls *:bg:fg:history'
 HISTSIZE=1000
 
 

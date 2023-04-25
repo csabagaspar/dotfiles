@@ -8,3 +8,7 @@ alias hygen='HYGEN_TMPLS=~/workspaces/hygen-templates/_templates hygen'
 alias ctags-ts='ctags --languages=typescript --recurse'
 alias fd='fdfind'
 alias fv='vim -o `fzf`'
+alias dk='docker kill $(docker container ls -q)'
+alias ds='docker stop $(docker ps -a -q)'
+alias dr='docker rm $(docker ps -a -q)'
+
