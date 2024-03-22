@@ -20,7 +20,7 @@ else
   ranger
   wget
   curl
-  ctags
+  exuberant-ctags
   fzf
   dos2unix
   )

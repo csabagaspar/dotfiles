@@ -1,0 +1,1 @@
+QT_QPA_PLATFORM=xcb  QTWEBENGINE_CHROMIUM_FLAGS='--no-sandbox' openconnect-sso --server vpn.accretivetg.com
