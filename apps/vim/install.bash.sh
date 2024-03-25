@@ -3,12 +3,9 @@
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
-echo "=============================="
-echo "Running vim setup..."
-echo "=============================="
-echo "=============================="
-echo -e "\n\nCreating vim symlinks"
-echo "=============================="
+echo -e "\t=============================="
+echo -e "\tRunning Vim setup..."
+echo -e "\t=============================="
 VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vimrc:$APPS/vim/vimrc"
         "$HOME/.vim/autoload/pathogen.vim:$DOTFILES/submodules/vim-pathogen.git/autoload/pathogen.vim"
@@ -36,9 +33,9 @@ for file in "${VIMFILES[@]}"; do
     KEY=${file%%:*}
     VALUE=${file#*:}
     if [ -e ${KEY} ]; then
-        echo "${KEY} already exists... skipping."
+        echo -e "\t ${KEY} already exists... skipping."
     else
-        echo "Creating symlink for $KEY"
+        echo -e "\tCreating symlink for $KEY"
         ln -s ${VALUE} ${KEY}
     fi
 done

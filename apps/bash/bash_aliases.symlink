@@ -1,4 +1,4 @@
-alias t='~/dotfiles/bash/t.sh'
+alias t='~/dotfiles/apps/bash/t.sh'
 alias c='clear'
 alias r='ranger'
 alias w='w3m'

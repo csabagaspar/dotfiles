@@ -1,43 +1,35 @@
 #!/usr/bin/env bash
 
-echo "=============================="
-echo -e "\n\nPrerequisite"
-echo "=============================="
-echo -e "\n\ngit"
+DOTFILES=$HOME/dotfiles
 
 echo "=============================="
-echo -e "\n\nRunning platform specific installs.."
-echo "=============================="
-
-if [ "$(uname)" == "Linux" ]; then
-    echo -e "\n\nRunning on Ubuntu"
-#    source ./ubuntu.sh
-fi
-
-
-echo "=============================="
-echo "Initializing git submodule(s)"
+echo "Initializing git submodule(s)..."
 echo "=============================="
 git submodule update --init --recursive
+echo "Done."
 
 
+echo -e "\n\n=============================="
+echo "SYMLINKS"
 echo "=============================="
-echo -e "\nCreating symlinks"
-echo "=============================="
-DOTFILES=$HOME/dotfiles
 linkables=$( find -H "$DOTFILES" -maxdepth 3 -name '*.symlink' )
 for file in $linkables ; do
     target="$HOME/.$( basename $file '.symlink' )"
     if [ -e $target ]; then
-        echo "~${target#$HOME} already exists... Skipping."
+        echo -e "\t ~${target#$HOME} already exists... Skipping."
     else
-        echo "Creating symlink for $file"
+        echo -e "\tCreating symlink for $file"
         ln -s $file $target
     fi
 done
+echo "Done."
 
-/bin/bash ~/dotfiles/apps/git/install.sh
-/bin/bash  ~/dotfiles/apps/vim/install.sh
-/bin/bash  ~/dotfiles/apps/ctags/install.sh
 
+echo -e "\n\n=============================="
+echo "INSTALLS"
+echo "=============================="
+installs=$( find -H "$DOTFILES" -maxdepth 3 -name 'install.bash.sh' )
+for file in $installs ; do
+    /bin/bash $file
+done
 echo "Done."
