@@ -1,2 +1,3 @@
 apps/vim/bundle
 apps/vim/autoload
+*.local.*
