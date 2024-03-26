@@ -23,13 +23,3 @@ for file in $linkables ; do
     fi
 done
 echo "Done."
-
-
-echo -e "\n\n=============================="
-echo "INSTALLS"
-echo "=============================="
-installs=$( find -H "$DOTFILES" -maxdepth 3 -name 'install.bash.sh' )
-for file in $installs ; do
-    /bin/bash $file
-done
-echo "Done."

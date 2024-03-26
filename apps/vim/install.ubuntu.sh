@@ -1,11 +1,26 @@
 #!/usr/bin/env bash
+echo -e "\n=============================================="
+echo "Installing vim..."
+echo "=============================================="
 
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
-echo -e "\t=============================="
-echo -e "\tRunning Vim setup..."
-echo -e "\t=============================="
+sudo apt-get update
+
+formulas=(
+  vim
+  vim-gtk
+)
+
+for formula in "${formulas[@]}"; do
+  if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
+    echo -e "\t\t $formula already installed... skipping."
+  else
+    sudo apt-get install $formula
+  fi
+done
+
 VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vimrc:$APPS/vim/vimrc"
         "$HOME/.vim/autoload/pathogen.vim:$DOTFILES/submodules/vim-pathogen.git/autoload/pathogen.vim"
@@ -35,7 +50,7 @@ for file in "${VIMFILES[@]}"; do
     if [ -e ${KEY} ]; then
         echo -e "\t ${KEY} already exists... skipping."
     else
-        echo -e "\tCreating symlink for $KEY"
+        echo -e "\t Creating symlink for $KEY"
         ln -s ${VALUE} ${KEY}
     fi
 done
