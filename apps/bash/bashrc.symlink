@@ -4,13 +4,10 @@ for file in $envs ; do
     source $file
 done
 
-
-
 # set PATH so it includes user's private bin if it exists
 if [ -d "$HOME/.local/bin" ] ; then
     PATH="$HOME/.local/bin:$PATH"
 fi
-
 
 if [ -f ~/.bash_aliases ] ; then
   source  ~/.bash_aliases

@@ -1,26 +1,17 @@
 #!/usr/bin/env bash
+
 echo -e "\n=============================================="
-echo "Installing bash basic commands and apps..."
+echo "Create symlinks..."
 echo "=============================================="
 
-sudo apt-get update
-
-formulas=(
- find
- zip
- unzip
- w3m
- ranger
- wget
- curl
- dos2unix
-)
-
-for formula in "${formulas[@]}"; do
-  if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
-    echo -e "\t\t $formula already installed... skipping."
-  else
-    sudo apt-get install $formula
-  fi
+linkables=$( find -H "$HOME/dotfiles" -maxdepth 3 -name '*.symlink' )
+for file in $linkables ; do
+    target="$HOME/.$( basename $file '.symlink' )"
+    if [ -e $target ]; then
+        echo "~${target#$HOME} already exists... Skipping."
+    else
+        echo "Creating symlink for $file"
+        ln -s $file $target
+    fi
 done
 

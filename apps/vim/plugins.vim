@@ -129,6 +129,6 @@ let g:tagbar_type_typescriptreact = {
 let g:fzf_buffers_jump = 1
 let g:fzf_tags_command = 'ctags -R src node_modules/@types'
 map <C-t> :Files<CR>
-map <C-z> :Lines<CR>
+map <C-z> :Rg<CR>
 map <C-b> :Buffers<CR>
 map <C-u> :Tags<CR>

@@ -3,6 +3,7 @@ echo -e "\n=============================================="
 echo "Installing vim..."
 echo "=============================================="
 
+
 DOTFILES=$HOME/dotfiles
 APPS=$HOME/dotfiles/apps
 
@@ -15,11 +16,13 @@ formulas=(
 
 for formula in "${formulas[@]}"; do
   if [[ $(sudo apt list --installed) == *"$formula"* ]]; then
-    echo -e "\t\t $formula already installed... skipping."
+    echo "$formula already installed... skipping."
   else
     sudo apt-get install $formula
   fi
 done
+
+git submodule update --init --recursive
 
 VIMFILES=( "$HOME/.vim:$APPS/vim"
         "$HOME/.vimrc:$APPS/vim/vimrc"
