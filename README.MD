@@ -1,5 +1,7 @@
 # Dofiles
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+### install git:
+* curl -o- https://raw.githubusercontent.com/csabagaspar/dotfiles/master/git.install.sh | bash
+
 
 ## Submodules
 ### adding submodule

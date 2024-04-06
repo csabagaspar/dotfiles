@@ -1,3 +1,4 @@
 apps/vim/bundle
 apps/vim/autoload
+node_modules
 *.local.sh*
