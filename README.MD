@@ -1,6 +1,7 @@
 # Dofiles
 ### install git:
 * curl -o- https://raw.githubusercontent.com/csabagaspar/dotfiles/master/git.install.sh | bash
+##backup .bashrc, .profile, .bash_login
 
 
 ## Submodules
