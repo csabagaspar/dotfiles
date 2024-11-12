@@ -3,3 +3,12 @@ snippet useState "React useState"
 const [$1, set${1/\w+\s*/\u$0/g}] = useState<>(${3:''})${0:;}
 endsnippet
 
+snippet asyncForEach "asyncForEach"
+
+export async function asyncForEach(array: number[] | string[], callback: (value: number | string) => Promise<void>) {
+  for (let index = 0; index < array.length; index++) {
+    await callback(array[index]);
+  }
+}
+
+endsnippet
